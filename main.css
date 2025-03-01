@@ -1,0 +1,42 @@
+
+
+body {
+    background: url('background.png') no-repeat;
+    background-size: cover;  /* Ensures the background image covers the entire viewport */
+    background-position: center; 
+}
+
+
+
+.nav-list{
+    justify-content: space-between; /* Distributes items with equal spacing */
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-item {
+    display: inline;
+    padding-left: 80px;
+    font-weight: bold;
+}
+
+
+
+.wrapper{
+    width: 400px;
+    /*background: changes color of the background*/
+    color: white; /*Changes color of the text*/ 
+}
+
+.wrapper h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.bottom-text{
+    background: black;
+    color:white;
+    margin-top: 380px;
+    text-align: center;
+}
