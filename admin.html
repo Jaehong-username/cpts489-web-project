@@ -61,25 +61,41 @@
     
     
     
-    
-    <div class = "about-wrapper container-fluid">
-        
-        <div class = "about-title">
-            <h1>Welcome to Trucker Broker!</h1>
-            <h2> - Your Trusted Freight Brokerage Partner</h2>
-        </div>
-        
-        <div class = "about-content">
-            
-            <p>
-                A trucker broker page serves as an online platform that connects freight brokers and truck drivers, 
-                facilitating the transportation of goods across various locations. 
-                Freight brokers act as intermediaries, matching trucking companies with available loads to be transported, 
-                ensuring that shippers’ cargo reaches its destination efficiently. This page typically offers tools and resources 
-                for both truckers and brokers to manage logistics, view available jobs, negotiate rates, and track shipments. 
-                By providing a centralized hub for communication and transaction management, a trucker broker page streamlines the freight matching process, benefiting both shippers and carriers.
-            </p>
-            
+    <div class="container-fluid d-flex justify-content-center">
+        <h1 class="nav-item">Admin Page</h1>
+    </div>
+    <div class = "admin-wrapper container-fluid">
+        <div class = "row w-100">
+            <div class = "col-6">
+                <h2>Brokerages</h2>
+                <div>Select brokerage for more info</div>
+                <div class="search-container">
+                    <input type="text" class="form-control search-input" placeholder="Search...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div>Create brokerage</div>
+                <form class="form-box">
+                    <div class = "input-box">
+                        <input type = "newBrokerage" placeholder="Name">
+                    </div>
+                </form>
+                <button type = "submit" class="btn w-50 my-2">Create</button>
+            </div>
+            <div class = "col-6">
+                <h2>Users</h2>
+                <div>Select user for more info</div>
+                <div class="search-container">
+                    <input type="text" class="form-control search-input" placeholder="Search...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div>Create user</div>
+                <form class="form-box">
+                    <div class = "input-box">
+                        <input type = "newBrokerage" placeholder="Name">
+                    </div>
+                </form>
+                <button type = "submit" class="btn w-50 my-2">Create</button>
+            </div>
         </div>
     </div>
     

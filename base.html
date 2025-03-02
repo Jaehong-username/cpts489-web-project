@@ -26,31 +26,31 @@
         <ul class = "nav-list">
             
             <a href = "base.html">
-                <li class = "nav-item">HOME</li>
+                <li class = "nav-item rounded">HOME</li>
             </a>
             
             <a href = "about.html">
-                <li class = "nav-item">ABOUT</li> <!--added class then listed the elements in horizontal a line-->
+                <li class = "nav-item rounded">ABOUT</li> <!--added class then listed the elements in horizontal a line-->
             </a>
             
             <a href = "trucker.html">
-                <li class = "nav-item">TRUCKER</li>
+                <li class = "nav-item rounded">TRUCKER</li>
             </a>
             
             <a href = "broker.html">
-                <li class = "nav-item">BROKER</li>
+                <li class = "nav-item rounded">BROKER</li>
             </a>
             
             <a href = "brokerage.html">
-                <li class = "nav-item">BROKERAGE</li>
+                <li class = "nav-item rounded">BROKERAGE</li>
             </a>
             
             <a href = "#">
-                <li class = "nav-item">REVIEW</li>
+                <li class = "nav-item rounded">REVIEW</li>
             </a>
             
             <a href = "contact.html">
-                <li class = "nav-item">CONTACT</li>
+                <li class = "nav-item rounded">CONTACT</li>
             </a>
             
             
@@ -62,7 +62,7 @@
     
     
     
-    <div class = "wrapper" id = "login">
+    <div class = "wrapper container-fluid" id = "login">
         <div class = "form-box login">
             <h2>Login</h2>
             <form action = "#" method = "get" onsubmit="return validateEmail()"> <!--allows users to submit data to a server. Acts as a container for input elements--> 
@@ -80,7 +80,8 @@
                 
                 <div class = "forget">
                     <label style="color: rgba(0,0,0,.5);font-weight: 500;"><input type = "checkbox">Remember me</label>
-                    <a style = "padding: 34px"href = "#">Forgot Password?</a>
+                    <br>
+                    <a style = "padding-bottom: 34px" href = "#">Forgot Password?</a>
                 </div>
                 
                 <button type = "submit" class="btn">Login</button>
@@ -95,8 +96,8 @@
     
     
     
-    <div class = "wrapper" id = "register" style="display: none; height: 700px;">
-        <div class = "form-box register">
+    <div class = "wrapper container-fluid" id = "register" style="display: none; height: 700px;">
+        <div class = "form-box register justify-content-center">
             <h2>Register</h2>
             <form action = "#" method = "get" onsubmit="return validateEmail()"> <!--allows users to submit data to a server. Acts as a container for input elements--> 
                 

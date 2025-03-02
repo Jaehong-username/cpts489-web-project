@@ -17,21 +17,60 @@ body {
 
 .nav-item {
     display: inline;
-    padding-left: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
     font-weight: bold;
+    border: 2px solid rgba(255,255,255,.5);
+    background: #e1cdca;
+    color: rgba(0,0,0, .5);
+    border-radius: 20px;
 }
 
+.admin-wrapper{
+    position: relative;
+    width: 40rem;
+    height: 30rem;
+    background: #e1cdca;/*background: changes color of the background*/
+    border: 2px solid rgba(255,255,255,.5); /*changes the color of the frame*/
+    color: white; /*Changes color of the text*/
+    border-radius: 20px; /*Make the edge smooth!*/
+    box-shadow: 0 0 30px rgba(0,0,0, .5); /*No horiz, vert effect blue is 30px adds shadow to the div*/
+    display: flex; /*Turn elements Makes all direct child elements flex items.*/
+    justify-content: center; /*horiz*/
+    align-items: center; /*vert*/
+}
 
+.search-container {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.search-input {
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 35px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+}
 
 .wrapper{
     position: relative;
     width: 400px;
     height: 500px;
-    background: transparent;/*background: changes color of the background*/
+    background: #e1cdca;/*background: changes color of the background*/
     border: 2px solid rgba(255,255,255,.5); /*changes the color of the frame*/
     color: white; /*Changes color of the text*/ 
     border-radius: 20px; /*Make the edge smooth!*/
-    backdrop-filter: blur(3px);
     box-shadow: 0 0 30px rgba(0,0,0, .5); /*No horiz, vert effect blue is 30px adds shadow to the div*/
     display: flex; /*Turn elements Makes all direct child elements flex items.*/
     justify-content: center; /*vert*/
@@ -40,7 +79,7 @@ body {
 
 .wrapper .form-box{
     width: 100%; /*changs the input to take over the entire width of the container*/
-    padding: 40px; /*distance between the border and the actual element so it oushes the inner elemts*/
+    padding: 30px; /*distance between the border and the actual element so it oushes the inner elemts*/
 }
 
 .wrapper .form-box h2{
@@ -87,7 +126,7 @@ body {
 
 
 
-.wrapper .btn{
+.btn{
     width: 100%;
     height: 50px;
     outline: none;
@@ -97,6 +136,8 @@ body {
     color: #fff;
     font-weight: 1000px;
     background-color: rgba(0,0,0,0.9);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .wrapper register{
@@ -127,9 +168,9 @@ body {
     position: relative;
     width: 1000px;
     height: 500px;
-    background: transparent;/*background: changes color of the background*/
+    background: #e1cdca;/*background: changes color of the background*/
     border: 2px solid rgba(255,255,255,.5); /*changes the color of the frame*/
-    color: white; /*Changes color of the text*/ 
+    color: rgba(0,0,0, .5); /*Changes color of the text*/ 
     border-radius: 20px; /*Make the edge smooth!*/
     backdrop-filter: blur(3px);
     box-shadow: 0 0 30px rgba(0,0,0, .5); /*No horiz, vert effect blue is 30px adds shadow to the div*/
@@ -137,13 +178,14 @@ body {
     flex-direction: column; /*by default it is row*/
     justify-content: center; /*vert*/
     align-items: center; /*horiz*/
+    padding: 50px;
     
 }
 
 .about-title{
-    color: rgba(146, 154, 136, 0.147);
+    color: black;
     width: 100%;
-    
-    padding: 50px;
+
+    padding-bottom: 20px
     
 }
