@@ -1,0 +1,32 @@
+<div class = "wrapper">
+        <form action = "">
+            <h1>Login</h1>
+            
+            <form action = "#" method = "get" onsubmit="return validateEmail()" >
+                <div class = "input-box">
+                    <input type = "text" class="type-info" placeholder="email" required id = "email">
+                </div>
+                
+                <div class = "input-box">
+                    <input type = "password" class="type-info"placeholder="password" required id = "password">
+                </div>
+            </form>
+            
+            
+            <div class = "forgot">
+                <label><input type = "checkbox">Remember me</label>
+                <a href = "#"><br>Forgot Username?</a>
+                <a href = "#"><br>Forgot Password?</a>
+            </div>
+            
+            
+            <button class="btn btn-primary" type="submit" onclick="validateEmail()">Login</button>
+            
+            <div class = "register">
+                <p>Don't have an account? <a href = "">Sign up</a></p>
+                
+            </div>
+            
+        </form>
+        
+    </div>

@@ -20,3 +20,15 @@ function validateEmail() {//document part of web api
     
     return (email_valid && password_valid); 
 }
+
+//Invoked when a sign up link is clicked
+function showRegisterForm() {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("register").style.display = "block";
+}
+
+//Invoked when a Sign in link is clicked
+function showLoginForm() {
+    document.getElementById("login").style.display = "block";
+    document.getElementById("register").style.display = "none";
+}

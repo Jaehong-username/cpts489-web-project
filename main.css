@@ -4,6 +4,7 @@ body {
     background: url('background.png') no-repeat;
     background-size: cover;  /* Ensures the background image covers the entire viewport */
     background-position: center; 
+
 }
 
 
@@ -23,9 +24,87 @@ body {
 
 
 .wrapper{
+    position: relative;
     width: 400px;
-    /*background: changes color of the background*/
+    height: 500px;
+    background: transparent;/*background: changes color of the background*/
+    border: 2px solid rgba(255,255,255,.5); /*changes the color of the frame*/
     color: white; /*Changes color of the text*/ 
+    border-radius: 20px; /*Make the edge smooth!*/
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px rgba(0,0,0, .5); /*No horiz, vert effect blue is 30px adds shadow to the div*/
+    display: flex; /*Turn elements Makes all direct child elements flex items.*/
+    justify-content: center; /*vert*/
+    align-items: center; /*horiz*/
+}
+
+.wrapper .form-box{
+    width: 100%; /*changs the input to take over the entire width of the container*/
+    padding: 40px; /*distance between the border and the actual element so it oushes the inner elemts*/
+}
+
+.wrapper .form-box h2{
+    font-size: 2em;
+    text-align: center;
+    color: rgba(0,0,0, .5);
+}
+
+.wrapper .form-box p{
+    color: rgba(0,0,0, .5);
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgba(0,0,0, .5);
+    margin: 30px 0;
+}
+
+
+.wrapper .input-box label{
+    position: absolute;
+    top: 50%; /*moves elements down*/
+    left:5px;
+    transform: translateY(-50%); /*moves half of its height moves the element along the y direction*/
+    color: rgba(0,0,0, .5);
+    font-weight: 700; /*how bold the font is*/
+    pointer-events: none; /*disable mouse interaction with an element*/
+}
+
+.wrapper .input-box input{
+    width:100%; /*the actual content fills up the whole margin*/
+    height:100%; /*the actual content fills up the whole margin*/
+    background: transparent;
+    border: none; /*remove the border of the input box */
+    outline: none; /*line disappears even if I click on the input box*/
+}
+
+.wrapper .input-box input:focus~label,
+.wrapper .input-box input:valid~label {
+    display: none;
+}
+
+
+
+.wrapper .btn{
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 1000px;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.wrapper register{
+    font-size: 10em;
+    color: rgba(0,0,0);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
 }
 
 .wrapper h1{
@@ -37,6 +116,34 @@ body {
 .bottom-text{
     background: black;
     color:white;
-    margin-top: 380px;
     text-align: center;
+    
+}
+
+
+
+
+.about-wrapper{
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    background: transparent;/*background: changes color of the background*/
+    border: 2px solid rgba(255,255,255,.5); /*changes the color of the frame*/
+    color: white; /*Changes color of the text*/ 
+    border-radius: 20px; /*Make the edge smooth!*/
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px rgba(0,0,0, .5); /*No horiz, vert effect blue is 30px adds shadow to the div*/
+    display: flex; /*Turn elements Makes all direct child elements flex items.*/
+    flex-direction: column; /*by default it is row*/
+    justify-content: center; /*vert*/
+    align-items: center; /*horiz*/
+    
+}
+
+.about-title{
+    color: rgba(57, 59, 57);
+    width: 100%;
+    
+    padding: 50px;
+    
 }

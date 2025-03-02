@@ -8,6 +8,8 @@
     
     <title>Trucker Broker</title>
     
+    <!--Including Boxicon-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <!--Using the boxicon bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
@@ -15,9 +17,10 @@
     <link rel = "stylesheet" href = "main.css" type = "text/css">
     <script src = "login.js"></script>
 </head>
-<body>
+<body class = "about">
+    
     <!--h1 is a title  h2 is a subtitle-->
-    <h1>Welcome to <en>Trucker Broker</en> - Your Trusted Freight Brokerage Partner</h1>
+    <h1><en>Trucker Broker</en></h1>
     
     <div class = "nav-bar">
         <hr> <!--draws a horiz line-->
@@ -27,7 +30,7 @@
                 <li class = "nav-item">HOME</li>
             </a>
             
-            <a href = "#">
+            <a href = "about.html">
                 <li class = "nav-item">ABOUT</li> <!--added class then listed the elements in horizontal a line-->
             </a>
             
@@ -52,23 +55,46 @@
             </a>
             
             
-            
         </ul>
         <hr> <!--draws a horiz line-->
     </div>
     
     
-
     
     
-    <div class = "bottom-text">
-        <address>
-            Pullman, WA 99163
-        </address>
-        &lt;&lt;&lt; &copy; Trucker Broker &gt;&gt;&gt;
+    <div class = "about-wrapper">
+        
+        <div class = "about-title">
+            <h1>Welcome to Trucker Broker!</h1>
+            <h2> - Your Trusted Freight Brokerage Partner</h2>
+        </div>
+        
+        <div class = "about-content">
+            
+            <p>
+                A trucker broker page serves as an online platform that connects freight brokers and truck drivers, 
+                facilitating the transportation of goods across various locations. 
+                Freight brokers act as intermediaries, matching trucking companies with available loads to be transported, 
+                ensuring that shippers’ cargo reaches its destination efficiently. This page typically offers tools and resources 
+                for both truckers and brokers to manage logistics, view available jobs, negotiate rates, and track shipments. 
+                By providing a centralized hub for communication and transaction management, a trucker broker page streamlines the freight matching process, benefiting both shippers and carriers.
+            </p>
+            
+        </div>
     </div>
+    
+    
+    
+    
+    
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+<div class = "bottom-text">
+    <address>
+        Pullman, WA 99163
+    </address>
+    &lt;&lt;&lt; &copy; Trucker Broker &gt;&gt;&gt;
+</div>
 </html>
