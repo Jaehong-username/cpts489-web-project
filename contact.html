@@ -17,8 +17,7 @@
     <link rel = "stylesheet" href = "main.css" type = "text/css">
     <script src = "login.js"></script>
 </head>
-<body class = "about">
-    
+<body>
     <!--h1 is a title  h2 is a subtitle-->
     <h1><en>Trucker Broker</en></h1>
     
@@ -59,42 +58,64 @@
         <hr> <!--draws a horiz line-->
     </div>
     
+    <div class = "contact-info">
+        <h1>Contact US</h1>
+        <h3>- If you have any questions or feedback, please don't feel hesitant to reach out to us!</h3>
+        <p>Hours: M-F 9am - 5pm</p>
+        <p>Call: 123-456-7890</p>
+        <p>Email: trucker.broker@email.com</p>
+        <p>Address: 1500 Spokane 3rd St. <br>Pullman, WA 99163</p>
+    </div>
     
     
-    
-    <div class = "about-wrapper">
-        
-        <div class = "about-title">
-            <h1>Welcome to Trucker Broker!</h1>
-            <h2> - Your Trusted Freight Brokerage Partner</h2>
-        </div>
-        
-        <div class = "about-content">
-            
-            <p>
-                A trucker broker page serves as an online platform that connects freight brokers and truck drivers, 
-                facilitating the transportation of goods across various locations. 
-                Freight brokers act as intermediaries, matching trucking companies with available loads to be transported, 
-                ensuring that shippers’ cargo reaches its destination efficiently. This page typically offers tools and resources 
-                for both truckers and brokers to manage logistics, view available jobs, negotiate rates, and track shipments. 
-                By providing a centralized hub for communication and transaction management, a trucker broker page streamlines the freight matching process, benefiting both shippers and carriers.
-            </p>
-            
+    <div class = "wrapper contact" style="height: 800px;"> 
+        <div class = "form-box login">
+            <h2>Questions & Feedback</h2>
+            <form action = "#" method = "get" onsubmit="return validateEmail()">
+                
+                <div class = "input-box">
+                    <input type = "name" required>
+                    <label>First Name</label>
+                </div>
+                
+                <div class = "input-box">
+                    <input type = "name" required>
+                    <label>Last Name</label>
+                </div>
+                
+                <div class = "input-box">
+                    <input type = "email" required>
+                    <label>Email</label>
+                </div>
+                
+                <div class ="message-form">
+                    <label>Your message</label>
+                    <br />
+                    <input type="text" name="message" value="" style="height: 150px; width: 330px;">
+                </div>  
+                
+                
+                
+                <button type = "submit" class="btn">Submit</button>
+                
+                
+                
+            </form>
         </div>
     </div>
     
     
+
     
     
-    
+    <div class = "bottom-text">
+        <address>
+            Pullman, WA 99163
+        </address>
+        &lt;&lt;&lt; &copy; Trucker Broker &gt;&gt;&gt;
+    </div>
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-<div class = "bottom-text">
-    <address>
-        Pullman, WA 99163
-    </address>
-    &lt;&lt;&lt; &copy; Trucker Broker &gt;&gt;&gt;
-</div>
 </html>

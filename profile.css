@@ -1,0 +1,48 @@
+body{
+  background: url("profile-background.png") no-repeat;
+  background-size: 100% auto;
+}
+
+.card-list .card-item{
+    color:white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blue(30px);
+    border: 2px solid rgba(255,255,255,.5)
+}
+
+.card-list .card-item .profile-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /*Make it a circle*/
+    border: 3px solid white;
+}
+
+.card-list .card-item .button{
+    border-radius: 30%;
+    background: seashell;
+}
+
+.card-list .card-item .button:hover{
+    background: bisque;
+    border: 1px solid #fff;
+}
+
+
+.swiper-container {
+    width: 100%; /* or a fixed width like 800px */
+    height: 400px; /* Set a height */
+    
+    
+}
+
+.swiper-slide {
+    width: 478px !important; /* Control slide width */
+    height: 500px !important; /* Control slide height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightblue;
+}
