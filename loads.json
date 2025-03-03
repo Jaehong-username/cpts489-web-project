@@ -1,0 +1,52 @@
+[
+  {
+    "loadId": "L001",
+    "commodity": "Fresh Produce",
+    "weight": 22000,
+    "dimensions": "20x8x8",
+    "equipment": "Refrigerated",
+    "origin": "Fresno, CA",
+    "destination": "Seattle, WA",
+    "rate": "$3,000"
+  },
+  {
+    "loadId": "L002",
+    "commodity": "Building Materials",
+    "weight": 28000,
+    "dimensions": "24x8x8",
+    "equipment": "Flatbed",
+    "origin": "Dallas, TX",
+    "destination": "Kansas City, MO",
+    "rate": "$2,200"
+  },
+  {
+    "loadId": "L003",
+    "commodity": "Dry Goods",
+    "weight": 15000,
+    "dimensions": "16x8x8",
+    "equipment": "Dry Van",
+    "origin": "Atlanta, GA",
+    "destination": "Miami, FL",
+    "rate": "$1,500"
+  },
+  {
+    "loadId": "L004",
+    "commodity": "Steel Pipes",
+    "weight": 30000,
+    "dimensions": "30x8x8",
+    "equipment": "Step Deck",
+    "origin": "Houston, TX",
+    "destination": "Denver, CO",
+    "rate": "$3,500"
+  },
+  {
+    "loadId": "L005",
+    "commodity": "Electronics",
+    "weight": 10000,
+    "dimensions": "12x8x8",
+    "equipment": "Dry Van",
+    "origin": "San Jose, CA",
+    "destination": "Las Vegas, NV",
+    "rate": "$2,000"
+  }
+]

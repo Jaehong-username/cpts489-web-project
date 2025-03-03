@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trucker Broker - Load Board</title>
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+<!-- Header / Nav -->
+<header>
+ <div class = "nav-bar">
+        <hr> <!--draws a horiz line-->
+        <ul class = "nav-list">
+
+            <a href = "base.html">
+                <li class = "nav-item rounded">HOME</li>
+            </a>
+
+            <a href = "about.html">
+                <li class = "nav-item rounded">ABOUT</li> <!--added class then listed the elements in horizontal a line-->
+            </a>
+
+            <a href = "trucker.html">
+                <li class = "nav-item rounded">TRUCKER</li>
+            </a>
+
+            <a href = "broker.html">
+                <li class = "nav-item rounded">BROKER</li>
+            </a>
+
+            <a href = "brokerage.html">
+                <li class = "nav-item rounded">BROKERAGE</li>
+            </a>
+
+            <a href = "#">
+                <li class = "nav-item rounded">REVIEW</li>
+            </a>
+
+            <a href = "contact.html">
+                <li class = "nav-item rounded">CONTACT</li>
+            </a>
+
+
+            <a href="load_board.html">
+                <li class="nav-item">LOAD BOARD</li>
+            </a>
+
+        </ul>
+        <hr> <!--draws a horiz line-->
+    </div>
+
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="load-board-card">
+        <h2>Load Board</h2>
+        <!-- Button to go to Add Load page -->
+        <button class="btn" onclick="window.location.href='add_load.html'">Add Load</button>
+
+        <table id="loadTable">
+            <thead>
+            <tr>
+                <th>Load ID</th>
+                <th>Cargo Description</th>
+                <th>Weight</th>
+                <th>Dimensions</th>
+                <th>Equipment</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Rate</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Load rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Pullman, WA 99163</p>
+    <p>&copy; Trucker Broker &raquo;</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        loadLoadsFromFile();
+    });
+</script>
+</body>
+</html>

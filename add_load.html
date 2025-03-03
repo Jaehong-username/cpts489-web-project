@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trucker Broker - Add Load</title>
+    <!-- Link to the same CSS file -->
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+<!-- Header / Nav -->
+<header>
+    <div class = "nav-bar">
+        <hr> <!--draws a horiz line-->
+        <ul class = "nav-list">
+
+            <a href = "base.html">
+                <li class = "nav-item rounded">HOME</li>
+            </a>
+
+            <a href = "about.html">
+                <li class = "nav-item rounded">ABOUT</li> <!--added class then listed the elements in horizontal a line-->
+            </a>
+
+            <a href = "trucker.html">
+                <li class = "nav-item rounded">TRUCKER</li>
+            </a>
+
+            <a href = "broker.html">
+                <li class = "nav-item rounded">BROKER</li>
+            </a>
+
+            <a href = "brokerage.html">
+                <li class = "nav-item rounded">BROKERAGE</li>
+            </a>
+
+            <a href = "#">
+                <li class = "nav-item rounded">REVIEW</li>
+            </a>
+
+            <a href = "contact.html">
+                <li class = "nav-item rounded">CONTACT</li>
+            </a>
+
+
+            <a href="load_board.html">
+                <li class="nav-item">LOAD BOARD</li>
+            </a>
+
+        </ul>
+        <hr> <!--draws a horiz line-->
+    </div>
+
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="card add-load-card">
+        <h2>Add a New Load</h2>
+        <form id="loadForm">
+            <div class="form-group">
+                <label for="loadId">Load ID</label>
+                <input type="text" id="loadId" required />
+            </div>
+            <div class="form-group">
+                <label for="commodity">Cargo/Commodity Description</label>
+                <input type="text" id="commodity" required />
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (lbs)</label>
+                <input type="number" id="weight" required />
+            </div>
+            <div class="form-group">
+                <label for="dimensions">Dimensions (L x W x H)</label>
+                <input type="text" id="dimensions" placeholder="e.g. 20x8x8" required />
+            </div>
+            <div class="form-group">
+                <label for="equipment">Equipment Type</label>
+                <select id="equipment">
+                    <option value="Dry Van">Dry Van</option>
+                    <option value="Flatbed">Flatbed</option>
+                    <option value="Refrigerated">Refrigerated (Reefer)</option>
+                    <option value="Step Deck">Step Deck</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="origin">Origin</label>
+                <input type="text" id="origin" placeholder="Pick-up location" required />
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" placeholder="Delivery location" required />
+            </div>
+            <div class="form-group">
+                <label for="rate">Offered Rate</label>
+                <input type="text" id="rate" placeholder="e.g. $1500 or $2.50 per mile" required />
+            </div>
+            <button type="submit" class="btn">Submit Load</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
