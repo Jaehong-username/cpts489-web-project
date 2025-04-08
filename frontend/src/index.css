@@ -1,0 +1,335 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+body {
+  background: url('background.png') no-repeat;
+  background-size: cover;  /* Ensures the background image covers the entire viewport */
+  background-position: center; 
+
+}
+
+
+
+.nav-list{
+  justify-content: space-between; /* Distributes items with equal spacing */
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-item {
+  display: inline;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 10px;
+  font-weight: bold;
+  border: 2px solid rgba(255,255,255,.5);
+  background: #e1cdca;
+  color: rgba(0,0,0, .5);
+  border-radius: 20px;
+}
+
+.admin-wrapper{
+  position: relative;
+  width: 40rem;
+  height: 30rem;
+  background: #e1cdca;/*background: changes color of the background*/
+  border: 2px solid rgba(255,255,255,.5); /*changes the color of the frame*/
+  color: white; /*Changes color of the text*/
+  border-radius: 20px; /*Make the edge smooth!*/
+  box-shadow: 0 0 30px rgba(0,0,0, .5); /*No horiz, vert effect blue is 30px adds shadow to the div*/
+  display: flex; /*Turn elements Makes all direct child elements flex items.*/
+  justify-content: center; /*horiz*/
+  align-items: center; /*vert*/
+}
+
+.search-container {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  height: 50px;
+  border-radius: 30px;
+  padding-left: 35px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background: #e1cdca;/*background: changes color of the background*/
+  border: 2px solid rgba(255,255,255,.5); /*changes the color of the frame*/
+  color: white; /*Changes color of the text*/ 
+  border-radius: 20px; /*Make the edge smooth!*/
+  box-shadow: 0 0 30px rgba(0,0,0, .5); /*No horiz, vert effect blue is 30px adds shadow to the div*/
+  display: flex; /*Turn elements Makes all direct child elements flex items.*/
+  justify-content: center; /*vert*/
+  align-items: center; /*horiz*/
+}
+
+.wrapper .form-box{
+  width: 100%; /*changs the input to take over the entire width of the container*/
+  padding: 30px; /*distance between the border and the actual element so it oushes the inner elemts*/
+}
+
+.wrapper .form-box h2{
+  font-size: 2em;
+  text-align: center;
+  color: rgba(0,0,0, .5);
+}
+
+.wrapper .form-box p{
+  color: rgba(0,0,0, .5);
+}
+
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid rgba(0,0,0, .5);
+  margin: 30px 0;
+}
+
+
+.wrapper .input-box label{
+  position: absolute;
+  top: 50%; /*moves elements down*/
+  left:5px;
+  transform: translateY(-50%); /*moves half of its height moves the element along the y direction*/
+  color: rgba(0,0,0, .5);
+  font-weight: 700; /*how bold the font is*/
+  pointer-events: none; /*disable mouse interaction with an element*/
+}
+
+.wrapper .input-box input{
+  width:100%; /*the actual content fills up the whole margin*/
+  height:100%; /*the actual content fills up the whole margin*/
+  background: transparent;
+  border: none; /*remove the border of the input box */
+  outline: none; /*line disappears even if I click on the input box*/
+}
+
+.wrapper .input-box input:focus~label,
+.wrapper .input-box input:valid~label {
+  display: none;
+}
+
+
+
+.btn{
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 1000px;
+  background-color: rgba(0,0,0,0.9);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wrapper register{
+  font-size: 10em;
+  color: rgba(0,0,0);
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.wrapper h1{
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.bottom-text{
+  background: black;
+  color:white;
+  text-align: center;
+  
+}
+
+
+
+
+.about-wrapper{
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  background: #e1cdca;/*background: changes color of the background*/
+  border: 2px solid rgba(255,255,255,.5); /*changes the color of the frame*/
+  color: rgba(0,0,0, .5); /*Changes color of the text*/ 
+  border-radius: 20px; /*Make the edge smooth!*/
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 30px rgba(0,0,0, .5); /*No horiz, vert effect blue is 30px adds shadow to the div*/
+  display: flex; /*Turn elements Makes all direct child elements flex items.*/
+  flex-direction: column; /*by default it is row*/
+  justify-content: center; /*vert*/
+  align-items: center; /*horiz*/
+  padding: 50px;
+  
+}
+
+.about-title{
+  color: black;
+  width: 100%;
+
+  padding-bottom: 20px
+  
+}
+
+/* --------------------------------------------------------------------------------------------- Load board Styling */
+
+.form-group {
+margin-bottom: 15px;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+input, select {
+width: 100%;
+padding: 8px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+.load-board-card {
+/* Width & Centering */
+width: fit-content;
+max-width: 1000px;
+margin: 40px auto;
+
+/* Background & Borders */
+background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+border-radius: 15px;                        /* rounded corners */
+box-shadow: 0 2px 10px rgba(0,0,0,0.2);     /* drop shadow */
+border: 1px solid #ddd;                     /*  border */
+
+/* Frosted-Glass Effect */
+backdrop-filter: blur(5px);
+
+/* Padding */
+padding: 20px;
+}
+
+/* Center the title inside the card */
+.load-board-card h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* -------------------------------------------------------------  Table styling for clear separation and centering */
+.load-board-card table {
+width: 100%;
+border-collapse: collapse; /* ensures borders don’t double up */
+}
+
+.load-board-card th,
+.load-board-card td {
+border: 1px solid #ccc; /* gives each cell a border */
+text-align: center;
+padding: 10px;
+}
+
+.load-board-card tbody tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+
+.add-load-card {
+/* Width & Centering */
+width: 75%;
+max-width: 600px;
+margin: 40px auto;
+
+/* Background & Borders */
+background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+border-radius: 15px;                        /* rounded corners */
+box-shadow: 0 2px 10px rgba(0,0,0,0.2);     /* drop shadow */
+border: 1px solid #ddd;                     /*  border */
+
+/* Frosted-Glass Effect */
+backdrop-filter: blur(5px);
+
+/* Padding */
+padding: 20px;
+}
+
+body{
+  background: url("profile-background.png") no-repeat;
+  background-size: 100% auto;
+}
+
+.card-list .card-item{
+    color:white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blue(30px);
+    border: 2px solid rgba(255,255,255,.5)
+}
+
+.card-list .card-item .profile-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /*Make it a circle*/
+    border: 3px solid white;
+}
+
+.card-list .card-item .button{
+    border-radius: 30%;
+    background: seashell;
+}
+
+.card-list .card-item .button:hover{
+    background: bisque;
+    border: 1px solid #fff;
+}
+
+
+.swiper-container {
+    width: 100%; /* or a fixed width like 800px */
+    height: 400px; /* Set a height */
+    
+    
+}
+
+.swiper-slide {
+    width: 478px !important; /* Control slide width */
+    height: 500px !important; /* Control slide height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightblue;
+}
