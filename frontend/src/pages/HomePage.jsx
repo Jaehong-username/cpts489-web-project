@@ -167,6 +167,7 @@ function HomePage() {
                                 name="capacity"
                                 value={registerForm.capacity}
                                 onChange={handleRegisterChange}
+                                required
                             />
                             <label>Truck Capacity</label>
                         </div>
