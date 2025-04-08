@@ -15,7 +15,7 @@ code {
 
 
 body {
-  background: url('background.png') no-repeat;
+  background: url('/public/background.png') no-repeat;
   background-size: cover;  /* Ensures the background image covers the entire viewport */
   background-position: center; 
 
@@ -288,7 +288,7 @@ padding: 20px;
 }
 
 body{
-  background: url("profile-background.png");
+  background: url("/public/profile-background.png");
   background-size: 100% auto;
 }
 
