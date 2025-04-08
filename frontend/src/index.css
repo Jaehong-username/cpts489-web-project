@@ -172,10 +172,12 @@ body {
   background: black;
   color:white;
   text-align: center;
-  
+  padding: 20px;
 }
 
-
+.main-content {
+  flex: 1;
+}
 
 
 .about-wrapper{
@@ -286,7 +288,7 @@ padding: 20px;
 }
 
 body{
-  background: url("profile-background.png") no-repeat;
+  background: url("profile-background.png");
   background-size: 100% auto;
 }
 

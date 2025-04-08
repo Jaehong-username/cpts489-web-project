@@ -54,7 +54,7 @@ function HomePage() {
     };
 
     return (
-        <div>
+        <div className="main-content">
             {isLoginVisible ? (
                 <div className="wrapper container-fluid" id="login">
                     <div className="form-box login">
@@ -88,7 +88,7 @@ function HomePage() {
                                     <input type="checkbox" /> Remember me
                                 </label>
                                 <br />
-                                <a style={{ paddingBottom: '34px' }}>Forgot Password?</a>
+                                <button className="btn">Forgot Password?</button>
                             </div>
 
                             <button type="submit" className="btn">Login</button>
@@ -96,9 +96,9 @@ function HomePage() {
                             <div className="register" id="signup">
                                 <p>
                                     Don't have an account?
-                                    <a className="signup-link" onClick={() => setIsLoginVisible(false)} style={{ cursor: 'pointer' }}>
+                                    <button className="signup-link btn" onClick={() => setIsLoginVisible(false)} style={{ cursor: 'pointer' }}>
                                         {" "}Sign up
-                                    </a>
+                                    </button>
                                 </p>
                             </div>
                         </form>
@@ -179,13 +179,13 @@ function HomePage() {
                             <div className="forget">
                                 <label style={{ color: 'rgba(0,0,0,.5)', fontWeight: 500 }}>
                                     <input type="checkbox" /> I agree to the
-                                    <a style={{ padding: '10px' }}>terms & conditions</a>
+                                    <button className="btn" style={{ padding: '10px' }}>terms & conditions</button>
                                 </label>
                             </div>
 
                             <button type="submit" className="btn">Sign in</button>
                         </form>
-                        <p style={{ marginTop: '10px', cursor: 'pointer' }} onClick={() => setIsLoginVisible(true)}>
+                        <p style={{ marginBottom: '50px', cursor: 'pointer' }} onClick={() => setIsLoginVisible(true)}>
                             Already have an account? <u>Go back to login</u>
                         </p>
                     </div>
