@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
+import { Link } from 'react-router-dom';
+
 
 function BrokersPage() {
     
@@ -33,8 +35,10 @@ function BrokersPage() {
             <p className="user-location">Company: {broker.company}</p>
             <p className="user-location">Rating: {broker.rating}</p>
             
-            <button className="button">Message</button>
-            <button className="button">Request</button>
+            <Link to="/messages">
+                <button className="button">Message</button>
+            </Link>
+
         </div>
     );
     return(

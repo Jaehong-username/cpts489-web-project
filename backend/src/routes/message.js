@@ -28,8 +28,8 @@ router.post('/', authenticate, async (req, res) => {
       return res.status(404).json({ error: `${targetType} not found` });
     }
     
-    // Create review
-    const review = await Review.create({
+    // Create Message
+    const Message = await Message.create({
         content,
         senderId: req.user.id,
         senderType: req.user.role,

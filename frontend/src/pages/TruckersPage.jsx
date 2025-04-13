@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
+import { Link } from 'react-router-dom';
 
 function TruckerBroker() {
     
@@ -30,12 +31,19 @@ function TruckerBroker() {
             <img src="profile.png" alt="User" className="profile-image" />
             <h2 className="user-name">User ID: {trucker.id }</h2>
             <p className="user-location">Location: {trucker.currentCity}</p>
-            <p className="user-profession">Trucker</p>
-            <p className="user-vehicle">Vehicle:</p>
-            <p className="user-capacity">Capacity: {trucker.currentCity}</p>
-            <p className="user-availability">Available: { trucker.status}</p>
-            <button className="button">Message</button>
-            <button className="button">Request</button>
+            <p className="user-profession">Occupation: Trucker</p>
+            <p className="user-vehicle">Capacity: {trucker.capacity}</p>
+            <p className="user-capacity">Current City: {trucker.currentCity}</p>
+            <p className="user-availability">Available: {trucker.status}</p>
+            
+            <Link to="/messages">
+                <button className="button">Message</button>
+            </Link>
+
+            
+            
+            
+            
         </div>
     );
     return(

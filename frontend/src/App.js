@@ -7,10 +7,13 @@ import TruckersPage from './pages/TruckersPage.jsx';
 import BrokersPage from './pages/BrokersPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import LoadBoard from './pages/LoadBoard.jsx';
+import ReviewPage from './pages/ReviewPage.jsx';
+import MessagePage from './pages/MessagePage.jsx';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
-import ReviewPage from './pages/ReviewPage.jsx';
+
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
             <Route path="/reviews" element={<ReviewPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/loadboard" element={<LoadBoard />} />
+            <Route path="/messages" element={<MessagePage />} />
           </Routes>
         </main>
         <Footer />

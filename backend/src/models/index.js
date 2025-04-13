@@ -3,9 +3,10 @@ const { sequelize } = require('../database');
 const User = require('./users');
 const Trucker = require('./truckers');
 const Broker = require('./brokers');
-const Review = require('./reviews');
+const Review = require('./review');
 const BrokerTrucker = require('./brokerTruckers');
 const Feedback = require('./feedback');
+const Message = require('./Message');
 
 // User associations
 User.hasOne(Trucker, { foreignKey: 'userId', as: 'truckerProfile' });
@@ -23,6 +24,7 @@ Broker.belongsToMany(Trucker, { through: BrokerTrucker, foreignKey: 'brokerId', 
 Review.belongsTo(User, { foreignKey: 'reviewerId', as: 'reviewer' });
 Review.belongsTo(User, { foreignKey: 'targetId', as: 'target' });
 
+
 module.exports = {
   sequelize,
   User,
@@ -31,4 +33,5 @@ module.exports = {
   Review,
   BrokerTrucker,
   Feedback,
+  Message
 };
