@@ -26,7 +26,6 @@ async function readSchemaFiles(dir) {
   const filePaths = await crawlForSchemaFiles(dir);
   const typeDefs = {};
   const typeNamePattern = /type\s+(\w+)/;
-  const typeRefPattern = /\b([A-Z][a-zA-Z0-9_]*)\b/g;
 
   for (const filePath of filePaths) {
     const moduleUrl = pathToFileURL(filePath);
