@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 const ContactPage = () => {
   //setFormData: A function used to update the state (formData).
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     email: '',
-    message: ''
+    content: ''
   });
 
   const handleInputChange = (e) => {
@@ -36,7 +36,7 @@ const ContactPage = () => {
       try {
         // Send the form data to the backend API
         // The fetch API returns a Promise that resolves when the request completes, either successfully or with an erro
-        const response = await fetch('http://localhost:3001/api/auth/contact', {
+        const response = await fetch('http://localhost:3000/api/feedback', {
           
           method: 'POST',
           headers: {
@@ -50,13 +50,13 @@ const ContactPage = () => {
           alert('Feedback submitted successfully!');
           // Clear form data after submission
           setFormData({
-            firstName: '',
-            lastName: '',
+            first_name: '',
+            last_name: '',
             email: '',
-            message: '',
+            content: '',
           });
         } else {
-          alert('Error submitting feedback: ' + formData.message);
+          alert('Error submitting feedback: ' + formData.content);
         }
       } catch (error) {
         console.error('Error submitting feedback:', error);
@@ -90,9 +90,9 @@ const ContactPage = () => {
             <div style={{ marginBottom: '15px' }}>
               <input
                 type="text"
-                name="firstName"
+                name="first_name" /* name and value formData.  need to math */
                 required
-                value={formData.firstName}
+                value={formData.first_name}
                 onChange={handleInputChange}
                 style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
               />
@@ -102,9 +102,9 @@ const ContactPage = () => {
             <div style={{ marginBottom: '15px' }}>
               <input
                 type="text"
-                name="lastName"
+                name="last_name"
                 required
-                value={formData.lastName}
+                value={formData.last_name}
                 onChange={handleInputChange}
                 style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
               />
@@ -127,8 +127,8 @@ const ContactPage = () => {
               <label>Your message</label>
               <br />
               <textarea
-                name="message"
-                value={formData.message}
+                name="content"
+                value={formData.content}
                 onChange={handleInputChange}
                 style={{ height: '150px', width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
               />

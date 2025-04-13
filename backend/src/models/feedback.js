@@ -1,17 +1,18 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../database');
 
+// Defining a Feedback table
 const Feedback = sequelize.define('Feedback', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    first_name: {
+    firstName: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    last_name: {
+    lastName: {
         type: DataTypes.STRING,
         allowNull: false
     },

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -8,19 +8,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
 function TruckerBroker() {
+    
+    const [truckers, setTruckers] = useState([]);
+    
+    
     useEffect(() => {
         // Swiper and Bootstrap JS is handled through the Swiper React component
+        fetch('http://localhost:3000/api/truckers')
+            .then(res => res.json())
+            .then(data => {
+                console.log("Fetched truckers:", data); // Log the data to see if it's returned properly
+                setTruckers(data);
+            })
+            .catch(err => {
+                console.error('Error fetching trucker data:', err);
+            });
     }, []);
 
-    const userCard = (
+    const userCard = (trucker) => (
         <div className="basic-info">
             <img src="profile.png" alt="User" className="profile-image" />
             <h2 className="user-name">First Name, Last Name</h2>
-            <p className="user-location">Pullman, WA</p>
+            <p className="user-location">Location: {trucker.currentCity}</p>
             <p className="user-profession">Trucker</p>
             <p className="user-vehicle">Vehicle:</p>
-            <p className="user-capacity">Capacity:</p>
-            <p className="user-availability">Available</p>
+            <p className="user-capacity">Capacity: {trucker.currentCity}</p>
+            <p className="user-availability">Available: { trucker.status}</p>
             <button className="button">Message</button>
             <button className="button">Request</button>
         </div>
@@ -36,9 +49,24 @@ function TruckerBroker() {
                         pagination={{ clickable: true }}
                         className="card-list"
                     >
-                        <SwiperSlide className="card-item">{userCard}</SwiperSlide>
-                        <SwiperSlide className="card-item">{userCard}</SwiperSlide>
-                        <SwiperSlide className="card-item">{userCard}</SwiperSlide>
+                        
+                        {/* Render the truckers dynamically */}
+                        {truckers.length === 0 ? ( /*if the the list of truckers is empty*/
+                            <SwiperSlide className="card-item"> {/* Show a message when no truckers are available */}
+                                No truckers in the list
+                            </SwiperSlide>
+                        ) : (
+                            truckers.map((trucker) => (
+                            <SwiperSlide key={trucker.id} className="card-item">
+                                {userCard(trucker)}
+                            </SwiperSlide>
+                            ))
+                        )}
+                    
+                        
+                        
+                        
+                        
                     </Swiper>
                 </div>
             </div>

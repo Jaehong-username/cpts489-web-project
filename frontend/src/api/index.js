@@ -1,9 +1,12 @@
 import axios from 'axios';
 
+// if the app is running in prouction
 const API_URL = process.env.NODE_ENV === 'production' 
   ? '/api' 
-  : 'http://localhost:5000/api';
+  : 'http://localhost:3000/api'; // uses http://localhost:3001/api to hit your local backend server.
 
+
+// axios instance with common configuration (base URL + headers).
 export const api = axios.create({
   baseURL: API_URL,
   headers: {
