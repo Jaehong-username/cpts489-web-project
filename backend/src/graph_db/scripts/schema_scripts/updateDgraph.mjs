@@ -48,8 +48,11 @@ async function runCurl() {
         console.log('✅ Curl output:\n', stdout);
 
         try {
-            await rename('./output/build.graphql', './output/current.graphql');
-            console.log('Schema updated: build.graphql -> current.graphql');
+            const outputDir = path.resolve(__dirname, './output');
+            await rename(
+                path.join(outputDir, 'build.graphql'),
+                path.join(outputDir, 'current.graphql')
+            );
         } catch (err) {
             console.error('Failed to rename schema file:', err);
         }
