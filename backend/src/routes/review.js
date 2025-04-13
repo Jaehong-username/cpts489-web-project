@@ -6,6 +6,7 @@ const { authenticate } = require('../middlewares/auth');
 const router = express.Router();
 
 // Create a new review (protected)
+// POST /reviews will only go through if the user is logged in and successfully authenticated
 router.post('/', authenticate, async (req, res) => {
   try {
     const { targetId, targetType, content, rating } = req.body;

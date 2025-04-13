@@ -10,6 +10,7 @@ import LoadBoard from './pages/LoadBoard.jsx';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
+import ReviewPage from './pages/ReviewPage.jsx';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/truckers" element={<TruckersPage />} />
             <Route path="/brokers" element={<BrokersPage />} />
+            <Route path="/reviews" element={<ReviewPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/loadboard" element={<LoadBoard />} />
           </Routes>

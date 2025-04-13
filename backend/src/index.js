@@ -8,6 +8,8 @@ const brokerRoutes = require('./routes/broker');
 const reviewRoutes = require('./routes/review');
 const adminRoutes = require('./routes/admin');
 const feedbackRoutes = require('./routes/feedback');
+const messageRoutes = require('./routes/message');
+
 const cors = require('cors');
 
 
@@ -29,6 +31,7 @@ app.use('/api/brokers', brokerRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/feedback', feedbackRoutes);
+app.use('/api/message', messageRoutes);
 
 // Test route
 //  When a GET request is made to /api/test
