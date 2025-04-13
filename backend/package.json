@@ -1,10 +1,12 @@
+{
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "make-dgraph": "node ./src/graph_db/scripts/schema_scripts/makeDgraph.mjs"
   },
   "keywords": [],
   "author": "",

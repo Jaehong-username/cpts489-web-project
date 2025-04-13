@@ -4,8 +4,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import { config } from 'dotenv';
 
-const SEED_DATA_DIR = path.resolve('./../seed_data').concat('/');
-config({ path: './../../.env' });
+const SEED_DATA_DIR = path.resolve('./../../seed_data').concat('/');
+config({ path: './../../../../.env' });
 
 const ENDPOINT = process.env.DGRAPH_ENDPOINT_LINUX.concat('/graphql');
 if (!ENDPOINT) throw new Error('Missing DGRAPH_ENDPOINT in .env');
@@ -36,7 +36,7 @@ async function graphqlRequest(query, variables = {}) {
 }
 
 function getPath(file) {
-  return path.resolve('./seed_data/', file);
+  return path.resolve('./../seed_data/', file);
 }
 
 async function loadJSON(file) {

@@ -4,7 +4,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const schemaDir = path.resolve(__dirname, '../schema');
+const schemaDir = path.resolve(__dirname, '../../schema');
 const outputPath = path.resolve(__dirname, './output/build.graphql');
 
 async function crawlForSchemaFiles(dir, exts = ['.js', '.mjs']) {

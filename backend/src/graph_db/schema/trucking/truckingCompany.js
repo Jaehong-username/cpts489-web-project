@@ -3,7 +3,7 @@ type TruckingCompany {
    id: ID!
    name: String! @search(by: [exact])
    address: String
-   workers: [TruckingWorker] 
+   workers: [TruckingWorker] @hasInverse(field: company)
    reviews: [Review] @hasInverse(field: revieweeTruckingCompany)
    website: String
    email: String

@@ -1,10 +1,13 @@
 module.exports = `
 type Review {
     id: ID!
-    rating: Float!
     comment: String
+    
+    rating: Float!
     communication: Float
     reliability: Float
+    professionalism: Float
+    
     timestamp: DateTime!
     
     reviewerBrokerWorker: BrokerWorker @hasInverse(field: reviewsLeft)
