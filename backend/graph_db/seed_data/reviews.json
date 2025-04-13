@@ -1,0 +1,82 @@
+[
+  {
+    "rating": 4.7,
+    "comment": "Handled subcontracted freight very well.",
+    "communication": 4.8,
+    "reliability": 4.6,
+    "reviewerType": "TruckingWorker",
+    "reviewerName": "Derek Lin",
+    "revieweeType": "TruckingWorker",
+    "revieweeName": "Elias James"
+  },
+  {
+    "rating": 4.5,
+    "comment": "Professional and timely broker.",
+    "communication": 4.7,
+    "reliability": 4.5,
+    "reviewerType": "TruckingWorker",
+    "reviewerName": "Fatima Hassan",
+    "revieweeType": "BrokerWorker",
+    "revieweeName": "Noah Kim"
+  },
+  {
+    "rating": 4.9,
+    "comment": "Driver was excellent with sensitive cargo.",
+    "communication": 5.0,
+    "reliability": 4.9,
+    "reviewerType": "BrokerWorker",
+    "reviewerName": "Aisha Morgan",
+    "revieweeType": "TruckingWorker",
+    "revieweeName": "Derek Lin"
+  },
+  {
+    "rating": 4.3,
+    "comment": "Broker coordination was smooth and responsive.",
+    "communication": 4.5,
+    "reliability": 4.4,
+    "reviewerType": "BrokerWorker",
+    "reviewerName": "Lena Patel",
+    "revieweeType": "BrokerWorker",
+    "revieweeName": "Oscar Reed"
+  },
+  {
+    "rating": 4.6,
+    "comment": "Great team of drivers and dispatchers.",
+    "communication": 4.7,
+    "reliability": 4.5,
+    "reviewerType": "BrokerWorker",
+    "reviewerName": "Oscar Reed",
+    "revieweeType": "TruckingCompany",
+    "revieweeName": "ColdChain Express"
+  },
+  {
+    "rating": 4.2,
+    "comment": "Good scheduling system and staff.",
+    "communication": 4.3,
+    "reliability": 4.1,
+    "reviewerType": "TruckingWorker",
+    "reviewerName": "Elias James",
+    "revieweeType": "BrokerCompany",
+    "revieweeName": "FreightForward Pros"
+  },
+  {
+    "rating": 4.8,
+    "comment": "Company communicates clearly and pays on time.",
+    "communication": 4.9,
+    "reliability": 4.7,
+    "reviewerType": "TruckingWorker",
+    "reviewerName": "Vivian Tran",
+    "revieweeType": "BrokerCompany",
+    "revieweeName": "LogiChain Solutions"
+  },
+  {
+    "rating": 4.5,
+    "comment": "Highly reliable for cold freight coordination.",
+    "communication": 4.6,
+    "reliability": 4.4,
+    "reviewerType": "BrokerWorker",
+    "reviewerName": "Maya Singh",
+    "revieweeType": "TruckingCompany",
+    "revieweeName": "IronHorse Logistics"
+  }
+]

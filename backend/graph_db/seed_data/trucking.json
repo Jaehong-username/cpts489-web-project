@@ -1,0 +1,72 @@
+[
+  {
+    "category": "Refrigerated Freight",
+    "companies": [
+      {
+        "name": "ColdChain Express",
+        "address": "Seattle, WA",
+        "website": "https://coldchainexpress.com",
+        "email": "contact@coldchainexpress.com",
+        "phone": "206-555-0133",
+        "facebook": "facebook.com/coldchain",
+        "linkedin": "linkedin.com/company/coldchainexpress",
+        "twitter": "twitter.com/coldchain",
+        "workers": [
+          {
+            "name": "Derek Lin",
+            "role": "Driver",
+            "currentCity": "Seattle",
+            "status": "Active",
+            "email": "derek@coldchainexpress.com",
+            "phone": "206-555-0110",
+            "isCustomerFacing": true
+          },
+          {
+            "name": "Fatima Hassan",
+            "role": "Coordinator",
+            "currentCity": "Tacoma",
+            "status": "Available",
+            "email": "fatima@coldchainexpress.com",
+            "phone": "206-555-0111",
+            "isCustomerFacing": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Flatbed Freight",
+    "companies": [
+      {
+        "name": "IronHorse Logistics",
+        "address": "Phoenix, AZ",
+        "website": "https://ironhorselogistics.com",
+        "email": "support@ironhorselogistics.com",
+        "phone": "602-555-0199",
+        "facebook": "facebook.com/ironhorse",
+        "linkedin": "linkedin.com/company/ironhorse",
+        "twitter": "twitter.com/ironhorselogi",
+        "workers": [
+          {
+            "name": "Elias James",
+            "role": "Driver",
+            "currentCity": "Phoenix",
+            "status": "Active",
+            "email": "elias@ironhorselogistics.com",
+            "phone": "602-555-0170",
+            "isCustomerFacing": true
+          },
+          {
+            "name": "Leila Carter",
+            "role": "Dispatcher",
+            "currentCity": "Tempe",
+            "status": "On Leave",
+            "email": "leila@ironhorselogistics.com",
+            "phone": "602-555-0171",
+            "isCustomerFacing": false
+          }
+        ]
+      }
+    ]
+  }
+]
