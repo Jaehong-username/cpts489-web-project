@@ -28,7 +28,7 @@ function TruckerBroker() {
     const userCard = (trucker) => (
         <div className="basic-info">
             <img src="profile.png" alt="User" className="profile-image" />
-            <h2 className="user-name">First Name, Last Name</h2>
+            <h2 className="user-name">User ID: {trucker.id }</h2>
             <p className="user-location">Location: {trucker.currentCity}</p>
             <p className="user-profession">Trucker</p>
             <p className="user-vehicle">Vehicle:</p>
