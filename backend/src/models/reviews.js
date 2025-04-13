@@ -24,8 +24,8 @@ const Review = sequelize.define('Review', {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: 'Users',
-      key: 'id'
+      model: 'Users', // This indicates a foreign key reference to the 'Users' table
+      key: 'id'      // It references the 'id' field in the 'Users' table
     }
   },
   targetId: {

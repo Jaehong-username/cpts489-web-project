@@ -5,6 +5,7 @@ const Trucker = require('./truckers');
 const Broker = require('./brokers');
 const Review = require('./reviews');
 const BrokerTrucker = require('./brokerTruckers');
+const Feedback = require('./feedback');
 
 // User associations
 User.hasOne(Trucker, { foreignKey: 'userId', as: 'truckerProfile' });
@@ -28,5 +29,6 @@ module.exports = {
   Trucker,
   Broker,
   Review,
-  BrokerTrucker
+  BrokerTrucker,
+  Feedback,
 };

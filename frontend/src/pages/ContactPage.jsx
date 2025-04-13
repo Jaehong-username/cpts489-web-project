@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const ContactPage = () => {
+  //setFormData: A function used to update the state (formData).
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -24,12 +25,43 @@ const ContactPage = () => {
     }
     return emailValid;
   };
-
-  const handleSubmit = (e) => {
+  
+  // making it an async function
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateEmail()) {
       console.log('Form data submitted:', formData);
+      
       // Add form submission logic here (e.g., API call)
+      try {
+        // Send the form data to the backend API
+        // The fetch API returns a Promise that resolves when the request completes, either successfully or with an erro
+        const response = await fetch('http://localhost:3001/api/auth/contact', {
+          
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+        
+        const data = await response.json();
+        if (response.ok) {
+          alert('Feedback submitted successfully!');
+          // Clear form data after submission
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            message: '',
+          });
+        } else {
+          alert('Error submitting feedback: ' + formData.message);
+        }
+      } catch (error) {
+        console.error('Error submitting feedback:', error);
+        alert('Something went wrong. Please try again.');
+      }
     }
   };
 
