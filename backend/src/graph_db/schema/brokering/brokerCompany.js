@@ -4,7 +4,6 @@ type BrokerCompany {
     name: String! @search(by: [exact])
     address: String
     workers: [BrokerWorker] @hasInverse(field: company)
-    brokering: Brokering
     reviews: [Review] @hasInverse(field: revieweeBrokerCompany)
     website: String
     email: String
