@@ -15,7 +15,7 @@ function TruckerBroker() {
     
     useEffect(() => {
         // Swiper and Bootstrap JS is handled through the Swiper React component
-        fetch('http://localhost:3000/api/truckers')
+        fetch('http://localhost:3001/api/truckers')
             .then(res => res.json())
             .then(data => {
                 console.log("Fetched truckers:", data); // Log the data to see if it's returned properly

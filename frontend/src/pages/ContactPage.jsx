@@ -36,7 +36,7 @@ const ContactPage = () => {
       try {
         // Send the form data to the backend API
         // The fetch API returns a Promise that resolves when the request completes, either successfully or with an erro
-        const response = await fetch('http://localhost:3000/api/feedback', {
+        const response = await fetch('http://localhost:3001/api/feedback', {
           
           method: 'POST',
           headers: {

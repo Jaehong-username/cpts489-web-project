@@ -14,7 +14,7 @@ const ReviewPage = () => {
   useEffect(() => {
     const fetchTargets = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/reviews`);
+        const res = await fetch(`http://localhost:3001/api/reviews`);
         const data = await res.json();
         setTargets(data); // put the data as an arg to setTargets
         setFormData(prev => ({ ...prev, targetId: data[0]?.id || '' }));
@@ -51,7 +51,7 @@ const ReviewPage = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:3000/api/reviews', {
+      const response = await fetch('http://localhost:3001/api/reviews', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ export default ReviewPage;
 //     try {
 //       const token = localStorage.getItem('token'); // Adjust based on your auth method
 
-//       const response = await fetch('http://localhost:3000/api/reviews', {
+//       const response = await fetch('http://localhost:3001/api/reviews', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',

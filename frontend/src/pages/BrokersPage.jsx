@@ -16,7 +16,7 @@ function BrokersPage() {
     
     useEffect(() => {
         // Swiper and Bootstrap JS is handled through the Swiper React component
-        fetch('http://localhost:3000/api/brokers')
+        fetch('http://localhost:3001/api/brokers')
             .then(res => res.json())
             .then(data => {
                 console.log("Fetched Brokers:", data); // Log the data to see if it's returned properly
