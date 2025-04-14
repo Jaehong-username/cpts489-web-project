@@ -7,12 +7,12 @@ const router = express.Router();
 // Create a new feedback (protected)
 router.post('/', async (req, res) => {
     
-    const { first_name, last_name, email, content } = req.body //get the result from req.body in json.strigfy
+    const { firstName, lastName, email, content } = req.body //get the result from req.body in json.strigfy
     try {
       
         const feedback = await Feedback.create({
-            first_name,
-            last_name,
+            firstName,
+            lastName,
             email,
             content
         });
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
             feedback
         });
     
-
+        
     } catch (error) {
     console.error('Error submitting the comment:', error);
     res.status(400).json({ error: error.message });

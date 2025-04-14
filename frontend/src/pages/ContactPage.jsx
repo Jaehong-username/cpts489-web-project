@@ -50,13 +50,14 @@ const ContactPage = () => {
           alert('Feedback submitted successfully!');
           // Clear form data after submission
           setFormData({
-            first_name: '',
-            last_name: '',
+            firstName: '',
+            lastName: '',
             email: '',
             content: '',
           });
         } else {
-          alert('Error submitting feedback: ' + formData.content);
+          console.log('Payload being sent:', formData);
+          alert('Error submitting feedback: ' + formData.message);
         }
       } catch (error) {
         console.error('Error submitting feedback:', error);
@@ -92,7 +93,7 @@ const ContactPage = () => {
                 type="text"
                 name="first_name" /* name and value formData.  need to math */
                 required
-                value={formData.first_name}
+                value={formData.firstName}
                 onChange={handleInputChange}
                 style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
               />
@@ -104,7 +105,7 @@ const ContactPage = () => {
                 type="text"
                 name="last_name"
                 required
-                value={formData.last_name}
+                value={formData.lastName}
                 onChange={handleInputChange}
                 style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
               />
