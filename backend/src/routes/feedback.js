@@ -7,7 +7,7 @@ const router = express.Router();
 // Create a new feedback (protected)
 router.post('/', async (req, res) => {
     
-    const { firstName, lastName, email, content } = req.body //get the result from req.body in json.strigfy
+    const { first_name, last_name, email, content } = req.body //get the result from req.body in json.strigfy
     try {
       
         const feedback = await Feedback.create({
