@@ -58,7 +58,7 @@ const MessagePage = () => {
         borderRadius: '10px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
       }}>
-        <h2>Send a Message</h2>
+        <h2>Send a Job Request</h2>
         <form onSubmit={handleSubmit}>
 
           <div style={{ marginBottom: '15px' }}>

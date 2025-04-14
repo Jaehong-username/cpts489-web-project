@@ -43,7 +43,7 @@ app.get('/api/test', (req, res) => {
 const startServer = async () => {
   try {
     // Sync database
-    await sequelize.sync({alter: true}); // ensures that sequelize model is synced with the database
+    await sequelize.sync(); // ensures that sequelize model is synced with the database
     console.log('Database synchronized');
     
     // Start server

@@ -36,7 +36,7 @@ function BrokersPage() {
             <p className="user-location">Rating: {broker.rating}</p>
             
             <Link to="/messages">
-                <button className="button">Message</button>
+                <button className="button">Request Job</button>
             </Link>
 
         </div>

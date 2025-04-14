@@ -37,7 +37,7 @@ function TruckerBroker() {
             <p className="user-availability">Available: {trucker.status}</p>
             
             <Link to="/messages">
-                <button className="button">Message</button>
+                <button className="button">Request Job</button>
             </Link>
 
             
