@@ -11,8 +11,8 @@ router.post('/', async (req, res) => {
     try {
       
         const feedback = await Feedback.create({
-            first_name,
-            last_name,
+            firstName: first_name,
+            lastName: last_name,
             email,
             content
         });
