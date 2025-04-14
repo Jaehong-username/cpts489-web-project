@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../index.css';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
     const [isLoginVisible, setIsLoginVisible] = useState(true);
@@ -332,7 +333,16 @@ function HomePage() {
                             <div className="forget">
                                 <label style={{ color: 'rgba(0,0,0,.5)', fontWeight: 500 }}>
                                     <input type="checkbox" required /> I agree to the
-                                    <button type="button" className="btn" style={{ padding: '10px' }}>terms & conditions</button>
+                                        <a
+                                            href="/terms-conditions"
+                                            target="_blank" /* Opens a browser in a new tab */
+                                            rel="noopener noreferrer" /* Prevents the new tab from being able to control the original page.  Hides the user info*/
+                                        >
+                                            <button type="button" className="btn" style={{ padding: '10px' }}>
+                                                terms & conditions
+                                            </button>
+                                        </a>
+                                        
                                 </label>
                             </div>
 
