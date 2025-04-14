@@ -280,101 +280,106 @@ function AdminDashboardPage() {
   };
 
   return (
-    <div className="admin-dashboard py-4">
-      <h1 className="mb-4">Admin Dashboard</h1>
-      
-      {/* Alert messages */}
-      {error && (
-        <div className="alert alert-danger alert-dismissible fade show" role="alert">
-          {error}
-          <button type="button" className="btn-close" onClick={() => setError(null)}></button>
-        </div>
-      )}
-      
-      {successMessage && (
-        <div className="alert alert-success alert-dismissible fade show" role="alert">
-          {successMessage}
-          <button type="button" className="btn-close" onClick={() => setSuccessMessage(null)}></button>
-        </div>
-      )}
-      
-      {/* Delete confirmation modal */}
-      {userToDelete && (
-        <div className="modal fade show" style={{ display: 'block', backgroundColor: 'rgba(0,0,0,0.5)' }} tabIndex="-1">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title">Confirm Delete</h5>
-                <button type="button" className="btn-close" onClick={cancelDelete}></button>
-              </div>
-              <div className="modal-body">
-                <p>Are you sure you want to delete user <strong>{userToDelete.username}</strong>?</p>
-                <p className="text-danger">This action cannot be undone. All associated data will be permanently removed.</p>
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" onClick={cancelDelete}>Cancel</button>
-                <button type="button" className="btn btn-danger" onClick={deleteUser}>Delete User</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      
-      {/* Tab navigation */}
-      <ul className="nav nav-tabs mb-4">
-        <li className="nav-item">
-          <button 
-            className={`nav-link ${activeTab === 'users' ? 'active' : ''}`} 
-            onClick={() => setActiveTab('users')}
-          >
-            Users
-          </button>
-        </li>
-        <li className="nav-item">
-          <button 
-            className={`nav-link ${activeTab === 'truckers' ? 'active' : ''}`} 
-            onClick={() => setActiveTab('truckers')}
-          >
-            Truckers
-          </button>
-        </li>
-        <li className="nav-item">
-          <button 
-            className={`nav-link ${activeTab === 'brokers' ? 'active' : ''}`} 
-            onClick={() => setActiveTab('brokers')}
-          >
-            Brokers
-          </button>
-        </li>
-      </ul>
-      
-      {/* Loading indicator */}
-      {loading ? (
-        <div className="d-flex justify-content-center my-5">
-          <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
-      ) : (
-        <div className="card">
-          <div className="card-body">
-            {activeTab === 'users' && users.length > 0 && renderUsersTab()}
-            {activeTab === 'truckers' && truckers.length > 0 && renderTruckersTab()}
-            {activeTab === 'brokers' && brokers.length > 0 && renderBrokersTab()}
+    <div className="container py-5">
+        <div className="card shadow-lg rounded-4">
+            <div className="card-body">
             
-            {/* Empty state messages */}
-            {activeTab === 'users' && users.length === 0 && !loading && (
-              <div className="text-center p-4">No users found</div>
-            )}
-            {activeTab === 'truckers' && truckers.length === 0 && !loading && (
-              <div className="text-center p-4">No truckers found</div>
-            )}
-            {activeTab === 'brokers' && brokers.length === 0 && !loading && (
-              <div className="text-center p-4">No brokers found</div>
-            )}
-          </div>
+                <h1 className="mb-4">Admin Dashboard</h1>
+                
+                {/* Alert messages */}
+                {error && (
+                    <div className="alert alert-danger alert-dismissible fade show" role="alert">
+                    {error}
+                    <button type="button" className="btn-close" onClick={() => setError(null)}></button>
+                    </div>
+                )}
+                
+                {successMessage && (
+                    <div className="alert alert-success alert-dismissible fade show" role="alert">
+                    {successMessage}
+                    <button type="button" className="btn-close" onClick={() => setSuccessMessage(null)}></button>
+                    </div>
+                )}
+                
+                {/* Delete confirmation modal */}
+                {userToDelete && (
+                    <div className="modal fade show" style={{ display: 'block', backgroundColor: 'rgba(0,0,0,0.5)' }} tabIndex="-1">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title">Confirm Delete</h5>
+                            <button type="button" className="btn-close" onClick={cancelDelete}></button>
+                        </div>
+                        <div className="modal-body">
+                            <p>Are you sure you want to delete user <strong>{userToDelete.username}</strong>?</p>
+                            <p className="text-danger">This action cannot be undone. All associated data will be permanently removed.</p>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" onClick={cancelDelete}>Cancel</button>
+                            <button type="button" className="btn btn-danger" onClick={deleteUser}>Delete User</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                )}
+                
+                {/* Tab navigation */}
+                <ul className="nav nav-tabs mb-4">
+                    <li className="">
+                    <button 
+                        className={`nav-link ${activeTab === 'users' ? 'active' : ''}`} 
+                        onClick={() => setActiveTab('users')}
+                    >
+                        Users
+                    </button>
+                    </li>
+                    <li className="">
+                    <button 
+                        className={`nav-link ${activeTab === 'truckers' ? 'active' : ''}`} 
+                        onClick={() => setActiveTab('truckers')}
+                    >
+                        Truckers
+                    </button>
+                    </li>
+                    <li className="">
+                    <button 
+                        className={`nav-link ${activeTab === 'brokers' ? 'active' : ''}`} 
+                        onClick={() => setActiveTab('brokers')}
+                    >
+                        Brokers
+                    </button>
+                    </li>
+                </ul>
+                
+                {/* Loading indicator */}
+                {loading ? (
+                    <div className="d-flex justify-content-center my-5">
+                    <div className="spinner-border text-primary" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                    </div>
+                ) : (
+                    <div className="card">
+                    <div className="card-body">
+                        {activeTab === 'users' && users.length > 0 && renderUsersTab()}
+                        {activeTab === 'truckers' && truckers.length > 0 && renderTruckersTab()}
+                        {activeTab === 'brokers' && brokers.length > 0 && renderBrokersTab()}
+                        
+                        {/* Empty state messages */}
+                        {activeTab === 'users' && users.length === 0 && !loading && (
+                        <div className="text-center p-4">No users found</div>
+                        )}
+                        {activeTab === 'truckers' && truckers.length === 0 && !loading && (
+                        <div className="text-center p-4">No truckers found</div>
+                        )}
+                        {activeTab === 'brokers' && brokers.length === 0 && !loading && (
+                        <div className="text-center p-4">No brokers found</div>
+                        )}
+                    </div>
+                    </div>
+                )}
+            </div>
         </div>
-      )}
     </div>
   );
 }
