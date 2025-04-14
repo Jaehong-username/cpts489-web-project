@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const ContactPage = () => {
   //setFormData: A function used to update the state (formData).
   const [formData, setFormData] = useState({
@@ -8,7 +9,8 @@ const ContactPage = () => {
     email: '',
     content: ''
   });
-
+  
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({

@@ -12,6 +12,10 @@ function TruckerBroker() {
     
     const [truckers, setTruckers] = useState([]);
     
+    // const [selectedTarget, setSelectedTarget] = useState(null); // For the selected trucker
+    //const handleSelectUser = (user) => {
+    //    setSelectedTarget(user); // user = { id: ..., name: ... }
+    // };
     
     useEffect(() => {
         // Swiper and Bootstrap JS is handled through the Swiper React component
@@ -29,17 +33,22 @@ function TruckerBroker() {
     const userCard = (trucker) => (
         <div className="basic-info">
             <img src="profile.png" alt="User" className="profile-image" />
-            <h2 className="user-name">User ID: {trucker.id }</h2>
-            <p className="user-location">Location: {trucker.currentCity}</p>
-            <p className="user-profession">Occupation: Trucker</p>
-            <p className="user-vehicle">Capacity: {trucker.capacity}</p>
-            <p className="user-capacity">Current City: {trucker.currentCity}</p>
-            <p className="user-availability">Available: {trucker.status}</p>
+            <h2 className="user-name">Username: {trucker.User.username}</h2>
+            <p>Email: {trucker.User.email}</p>
+            <p>Location: {trucker.currentCity}</p>
+            <p>Occupation: Trucker</p>
+            <p>Capacity: {trucker.capacity}</p>
+            <p>Current City: {trucker.currentCity}</p>
+            <p>Available: {trucker.status}</p>
             
-            <Link to="/messages">
-                <button className="button">Request Job</button>
+            
+            
+            <Link to={`/messages?id=${trucker.id}`}>
+                <button className="button">
+                    Request Job
+                </button>
             </Link>
-
+            
             
             
             

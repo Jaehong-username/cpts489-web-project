@@ -30,10 +30,11 @@ function BrokersPage() {
     const userCard = (broker) => (
         <div className="basic-info">
             <img src="profile.png" alt="User" className="profile-image" />
-            <h2 className="user-name">User ID: {broker.id}</h2>
-            <p className="user-profession">Broker</p>
-            <p className="user-location">Company: {broker.company}</p>
-            <p className="user-location">Rating: {broker.rating}</p>
+            <h2>Username: {broker.User.username}</h2>
+            <p>Email: {broker.User.email}</p>
+            <p>Occupation: Broker</p>
+            <p>Company: {broker.company}</p>
+            <p>Rating: {broker.rating}</p>
             
             <Link to="/messages">
                 <button className="button">Request Job</button>
