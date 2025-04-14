@@ -99,4 +99,47 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Admin registration endpoint with security key
+router.post('/register-admin', async (req, res) => {
+  try {
+    const { username, email, password, name, adminSecretKey } = req.body;
+    
+    // Check for admin secret key
+    if (!adminSecretKey || adminSecretKey !== process.env.ADMIN_SECRET_KEY) {
+      return res.status(403).json({ error: 'Unauthorized admin registration attempt' });
+    }
+    
+    // Create the admin user
+    const user = await User.create({
+      username,
+      email,
+      password,
+      name,
+      role: 'admin'
+    });
+    
+    // Generate JWT token
+    const token = jwt.sign(
+      { id: user.id, role: user.role },
+      process.env.JWT_SECRET || 'your-secret-key',
+      { expiresIn: '1d' }
+    );
+    
+    res.status(201).json({
+      message: 'Admin registered successfully',
+      user: {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+        name: user.name
+      },
+      token
+    });
+  } catch (error) {
+    console.error('Admin registration error:', error);
+    res.status(400).json({ error: error.message });
+  }
+});
+
 module.exports = router;

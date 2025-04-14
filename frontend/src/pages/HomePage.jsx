@@ -18,6 +18,7 @@ function HomePage() {
         currentCity: '',
         capacity: '',
         company: '',
+        adminSecretKey: '' // Added for admin registration
     });
 
     // Handle login submission
@@ -37,7 +38,7 @@ function HomePage() {
 
         try {
             // Replace with your actual API endpoint
-            const response = await fetch('http://localhost:3000/api/auth/login', {
+            const response = await fetch('http://localhost:3001/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -120,10 +121,17 @@ function HomePage() {
                 registrationData.currentCity = registerForm.currentCity;
             } else if (registerForm.role === 'broker') {
                 registrationData.company = registerForm.company;
+            } else if (registerForm.role === 'admin') {
+                registrationData.adminSecretKey = registerForm.adminSecretKey;
             }
             
+            // Choose the appropriate endpoint
+            const endpoint = registerForm.role === 'admin' 
+                ? 'http://localhost:3001/api/auth/register-admin'
+                : 'http://localhost:3001/api/auth/register';
+            
             // Replace with your actual API endpoint
-            const response = await fetch('http://localhost:3000/api/auth/register', {
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -184,6 +192,19 @@ function HomePage() {
                             required
                         />
                         <label>Company</label>
+                    </div>
+                );
+            case 'admin':
+                return (
+                    <div className="input-box">
+                        <input
+                            type="password"
+                            name="adminSecretKey"
+                            value={registerForm.adminSecretKey}
+                            onChange={handleRegisterChange}
+                            required
+                        />
+                        <label>Admin Secret Key</label>
                     </div>
                 );
             default:
@@ -301,6 +322,7 @@ function HomePage() {
                                 >
                                     <option value="trucker">Trucker</option>
                                     <option value="broker">Broker</option>
+                                    <option value="admin">Admin</option>
                                 </select>
                                 <label style={{ top: '-20px', fontSize: '12px' }}>Role</label>
                             </div>
