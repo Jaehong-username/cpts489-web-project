@@ -27,7 +27,7 @@ function ProfilePage() {
             return;
         }
         
-        fetch(`http://localhost:3000/api/users/${userId}`, {  //make sure to use back tick
+        fetch(`http://localhost:3001/api/users/${userId}`, {  //make sure to use back tick
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`,
@@ -59,7 +59,19 @@ function ProfilePage() {
             <p>Email: {user.email}</p>
             <p>Role: {user.role}</p>
             
-            <Link to={`/request?${user.id}`}>View Job Request</Link>
+            <Link to={`/view-reviews?id=${user.id}`}>
+                <button className="button">
+                    View Reviews
+                </button>
+            </Link>
+            
+            <Link to={`/requests?id=${user.id}`}>
+                <button className="button">
+                    View Requests
+                </button>
+            </Link>
+            
+           
             
         </div>
     );

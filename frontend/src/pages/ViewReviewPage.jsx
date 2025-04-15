@@ -3,12 +3,10 @@ import { useParams, Link } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 
 
-const JobRequestPage = () => {
+const ViewReviewPage = () => {
   
   const [reviews, setReviews] = useState([]);
   
-      
-      
   useEffect(() => {
     // to get the user information
     const token = localStorage.getItem('token');
@@ -45,15 +43,13 @@ const JobRequestPage = () => {
   const reviewList = (review) => (
     <div className="flex items-center gap-4">
       
-      <h2 className="user-name">
-        You have a message from an user Id of {review.reviewerId}
-      </h2>
-      
-      <Link to={`/detail?id=${review.id}`}>
-        <button className="button">
-          Request Job
-        </button>
-      </Link>
+        <Link to={`/view-reviews-detail?id=${review.id}`}>
+              
+            <h2 className="user-name">
+                A message from an user Id of {review.reviewerId}
+            </h2>
+        
+        </Link>
                 
                 
     </div>
@@ -84,4 +80,4 @@ const JobRequestPage = () => {
   );
 };
 
-export default JobRequestPage;
+export default ViewReviewPage;

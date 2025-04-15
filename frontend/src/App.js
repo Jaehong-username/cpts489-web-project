@@ -14,6 +14,8 @@ import TermsConditionsPage from './pages/TermsConditionsPage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 import RequestPage from './pages/RequestPage.jsx';
 import RequestDetailPage from './pages/RequestDetailPage.jsx';
+import ViewReviewPage from './pages/ViewReviewPage.jsx';
+import ViewReviewDetailPage from './pages/ViewReviewDetailPage.jsx';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
@@ -38,6 +40,9 @@ function App() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/requests" element={<RequestPage />} />
             <Route path="/request-detail" element={<RequestDetailPage />} />
+            <Route path="/view-reviews" element={<ViewReviewPage />} />
+            <Route path="/view-reviews-detail" element={<ViewReviewDetailPage />} />
+            
           </Routes>
         </main>
         <Footer />

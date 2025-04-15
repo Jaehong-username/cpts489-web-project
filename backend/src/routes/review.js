@@ -86,4 +86,36 @@ router.get('/user/:userId', async (req, res) => {
   }
 });
 
+
+// Get Review by its unique id after finding which user it belongs to
+router.get('/:id', async (req, res) => {
+  try {
+    const review = await Review.findByPk(req.params.id, {
+      // if you want to select certain attributes  from the review model
+      attributes: ['content', 'rating', 'targetId', 'targetType', 'reviewerId'],
+      include: [ // include the associated model!
+        {
+          model: User,
+          as: 'reviewer', // <== use alias
+          attributes: { exclude: ['password'] }
+        }
+      ]
+      
+    });
+    
+    if (!review) {
+      return res.status(404).json({ error: 'Review not found' });
+    }
+    
+    res.json(review);
+  } catch (error) {
+    console.error('Error fetching the review:', error);
+    res.status(500).json({ error: 'Failed to fetch the review' });
+  }
+}
+);
+
+
+
+
 module.exports = router;

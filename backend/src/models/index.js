@@ -21,8 +21,11 @@ Broker.belongsTo(User, { foreignKey: 'userId' });
 Broker.belongsToMany(Trucker, { through: BrokerTrucker, foreignKey: 'brokerId', as: 'truckers' });
 
 // Review associations
-Review.belongsTo(User, { foreignKey: 'reviewerId', as: 'reviewer' });
+Review.belongsTo(User, { foreignKey: 'reviewerId', as: 'reviewer' }); // I am using alias
 Review.belongsTo(User, { foreignKey: 'targetId', as: 'target' });
+
+
+
 
 
 module.exports = {
