@@ -31,8 +31,10 @@ function BrokersPage() {
         <div className="basic-info">
             <img src="profile.png" alt="User" className="profile-image" />
             <h2>Username: {broker.User.username}</h2>
+            <p>User Id: {broker.userId}</p>
             <p>Email: {broker.User.email}</p>
             <p>Occupation: Broker</p>
+            <p>Rating: {broker.rating}</p>
             <p>Company: {broker.company}</p>
             <p>Rating: {broker.rating}</p>
             

@@ -34,9 +34,11 @@ function TruckerBroker() {
         <div className="basic-info">
             <img src="profile.png" alt="User" className="profile-image" />
             <h2 className="user-name">Username: {trucker.User.username}</h2>
+            <p>User Id: {trucker.userId}</p>
             <p>Email: {trucker.User.email}</p>
             <p>Location: {trucker.currentCity}</p>
             <p>Occupation: Trucker</p>
+            <p>Rating: {trucker.rating}</p>
             <p>Capacity: {trucker.capacity}</p>
             <p>Current City: {trucker.currentCity}</p>
             <p>Available: {trucker.status}</p>

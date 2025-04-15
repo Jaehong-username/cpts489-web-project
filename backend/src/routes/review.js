@@ -15,12 +15,12 @@ router.post('/', authenticate, async (req, res) => {
     let target = null;
     if (targetType === 'trucker') {
       target = await Trucker.findOne({ 
-        where: { id: targetId },
+        where: { userId: targetId },
         include: [{ model: User }]
       });
     } else if (targetType === 'broker') {
       target = await Broker.findOne({ 
-        where: { id: targetId },
+        where: { userId: targetId },
         include: [{ model: User }]
       });
     }

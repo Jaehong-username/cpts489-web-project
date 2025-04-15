@@ -28,9 +28,9 @@ const ReviewPage = () => {
   }, [formData.targetType]);
   
   
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const truckerId = queryParams.get('id'); // Get the trucker's ID from query params
+  // const location = useLocation();
+  // const queryParams = new URLSearchParams(location.search);
+  // const truckerId = queryParams.get('id'); // Get the trucker's ID from query params
   
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -39,9 +39,9 @@ const ReviewPage = () => {
 
   const validateForm = () => {
     const { rating, content, targetId } = formData;
-    const validRating = rating >= 1 && rating <= 5;
+    const validRating = rating >= 0 && rating <= 5;
     if (!validRating) {
-      alert('Rating must be between 1 and 5.');
+      alert('Rating must be between 0 and 5.');
       return false;
     }
     if (!content.trim() || !targetId) {
@@ -125,7 +125,7 @@ const ReviewPage = () => {
           <input
             type="number"
             name="rating"
-            min="1"
+            min="0"
             max="5"
             value={formData.rating}
             onChange={handleInputChange}

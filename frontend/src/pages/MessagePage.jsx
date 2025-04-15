@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
+//This is a request!
 const MessagePage = () => {
   const [formData, setFormData] = useState({
     content: '',
@@ -19,33 +21,34 @@ const MessagePage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('http://localhost:3001/api/messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-      if (response.ok) {
-        alert('Message submitted successfully!');
-        setFormData({
-          content: '',
-          senderType: '',
-          senderId: '',
-          targetType: '',
-          targetId: '',
+     
+      try {
+        const response = await fetch('http://localhost:3001/api/messages', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         });
-      } else {
-        alert('Error submitting message: ' + data.message);
+  
+        const data = await response.json();
+        if (response.ok) {
+          alert('Job Request submitted successfully!');
+          setFormData({
+            content: '',
+            senderType: '',
+            senderId: '',
+            targetType: '',
+            targetId: '',
+          });
+        } else {
+          alert('Error submitting message: ' + data.message);
+        }
+      } catch (error) {
+        console.error('Error submitting message:', error);
+        alert('Something went wrong. Please try again.');
       }
-    } catch (error) {
-      console.error('Error submitting message:', error);
-      alert('Something went wrong. Please try again.');
-    }
+    
   };
 
   return (
@@ -62,8 +65,8 @@ const MessagePage = () => {
         <form onSubmit={handleSubmit}>
 
           <div style={{ marginBottom: '15px' }}>
-            <label>Sender Type</label>
-            <input
+            <label>Please select your occupation</label>
+            <select
               type="text"
               name="senderType"
               required
@@ -71,11 +74,14 @@ const MessagePage = () => {
               onChange={handleInputChange}
               placeholder="e.g. user"
               style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
-            />
+            >
+              <option value = 'trucker'>Trucker</option>
+              <option value = 'broker'>Broker</option>
+            </select>
           </div>
 
           <div style={{ marginBottom: '15px' }}>
-            <label>Sender ID</label>
+            <label>Please type your user ID</label>
             <input
               type="text"
               name="senderId"
@@ -88,8 +94,8 @@ const MessagePage = () => {
           </div>
 
           <div style={{ marginBottom: '15px' }}>
-            <label>Target Type</label>
-            <input
+            <label>Plase select the recipient's oocupation</label>
+            <select
               type="text"
               name="targetType"
               required
@@ -97,11 +103,14 @@ const MessagePage = () => {
               onChange={handleInputChange}
               placeholder="e.g. user"
               style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
-            />
+            >
+              <option value = 'trucker'>Trucker</option>
+              <option value = 'broker'>Broker</option>
+            </select>
           </div>
 
           <div style={{ marginBottom: '15px' }}>
-            <label>Target ID</label>
+            <label>Please type the recipient's user id</label>
             <input
               type="text"
               name="targetId"
@@ -136,7 +145,7 @@ const MessagePage = () => {
               cursor: 'pointer'
             }}
           >
-            Send Message
+            Send Job Request
           </button>
         </form>
       </div>

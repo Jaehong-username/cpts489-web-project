@@ -14,12 +14,12 @@ router.post('/', authenticate, async (req, res) => {
     let target = null;
     if (targetType === 'trucker') {
       target = await Trucker.findOne({ 
-        where: { id: targetId },
+        where: { userId: targetId },
         include: [{ model: User }]
       });
     } else if (targetType === 'broker') {
       target = await Broker.findOne({ 
-        where: { id: targetId },
+        where: { userId: targetId },
         include: [{ model: User }]
       });
     }
@@ -50,39 +50,39 @@ router.post('/', authenticate, async (req, res) => {
 });
 
 
-router.get('/', authenticate, async (req, res) => {
-    try {
-      const userId = req.user.id;  // Get the logged-in user's ID from the authenticated request
+// router.get('/', authenticate, async (req, res) => {
+//     try {
+//       const userId = req.user.id;  // Get the logged-in user's ID from the authenticated request
   
-      // Fetch messages where the user is either the sender or the target
-      const messages = await Message.findAll({
-        where: {
-          [Sequelize.Op.or]: [
-            { senderId: userId },  // Messages sent by the logged-in user
-            { targetId: userId },  // Messages sent to the logged-in user
-          ]
-        },
-        include: [
-          {
-            model: User,   // Include sender details
-            as: 'sender',
-            attributes: ['id', 'name', 'username'],
-          },
-          {
-            model: User,   // Include target details
-            as: 'target',
-            attributes: ['id', 'name', 'username'],
-          },
-        ],
-        order: [['createdAt', 'DESC']], // Optional: Order by message creation date, most recent first
-      });
+//       // Fetch messages where the user is either the sender or the target
+//       const messages = await Message.findAll({
+//         where: {
+//           [Sequelize.Op.or]: [
+//             { senderId: userId },  // Messages sent by the logged-in user
+//             { targetId: userId },  // Messages sent to the logged-in user
+//           ]
+//         },
+//         include: [
+//           {
+//             model: User,   // Include sender details
+//             as: 'sender',
+//             attributes: ['id', 'name', 'username'],
+//           },
+//           {
+//             model: User,   // Include target details
+//             as: 'target',
+//             attributes: ['id', 'name', 'username'],
+//           },
+//         ],
+//         order: [['createdAt', 'DESC']], // Optional: Order by message creation date, most recent first
+//       });
   
-      res.json(messages);
-    } catch (error) {
-      console.error('Error fetching messages:', error);
-      res.status(500).json({ error: error.message });
-    }
-});
+//       res.json(messages);
+//     } catch (error) {
+//       console.error('Error fetching messages:', error);
+//       res.status(500).json({ error: error.message });
+//     }
+// });
 
 
 

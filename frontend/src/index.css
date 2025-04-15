@@ -300,8 +300,9 @@ padding: 20px;
 }
 
 body{
-  background: url("/public/profile-background.png");
+  background: url("/public/profile-background.png") no-repeat;
   background-size: 100% auto;
+  background-size: 120% 120%;
 }
 
 .card-list .card-item{
@@ -311,7 +312,9 @@ body{
     border-radius: 10px;
     background: rgba(0,0,0,.5);
     backdrop-filter: blue(30px);
-    border: 2px solid rgba(255,255,255,.5)
+    border: 2px solid rgba(255,255,255,.5);
+    
+    
 }
 
 .card-list .card-item .profile-image{
@@ -341,9 +344,10 @@ body{
 
 .swiper-slide {
     width: 478px !important; /* Control slide width */
-    height: 500px !important; /* Control slide height */
+    height: 600px !important; /* Control slide height */
     display: flex;
     align-items: center;
     justify-content: center;
     background: lightblue;
+    
 }
