@@ -60,7 +60,7 @@ const ViewReviewPage = () => {
     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
       {/* Contact Info Section */}
       <div style={{ flex: 1, background: '#e1cdca', padding: '20px', borderRadius: '10px' }}>
-        <h1>Hello! You have received {reviews.length } requests so far!</h1>
+        <h1>Hello! You have received {reviews.length } reviews so far!</h1>
         
         
         {reviews.length === 0 ? ( /*if the the list of truckers is empty*/

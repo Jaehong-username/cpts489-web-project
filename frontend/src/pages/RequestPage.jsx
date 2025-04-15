@@ -5,7 +5,7 @@ import { jwtDecode } from 'jwt-decode';
 
 const JobRequestPage = () => {
   
-  const [reviews, setReviews] = useState([]);
+  const [requests, setRequests] = useState([]);
   
       
       
@@ -21,7 +21,7 @@ const JobRequestPage = () => {
         return;
     }
     
-    fetch(`http://localhost:3001/api/reviews/user/${userId}`, {  //make sure to use back tick
+    fetch(`http://localhost:3001/api/message/user/${userId}`, {  //make sure to use back tick
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -34,7 +34,7 @@ const JobRequestPage = () => {
     return res.json(); // return 
     })     
     .then((data) => {
-        setReviews(data);  // Set user profile data if successful
+        setRequests(data);  // Set user profile data if successful
     })
     .catch((err) => {
         alert("Error Occured fetching user data", err)
@@ -42,16 +42,16 @@ const JobRequestPage = () => {
     
   }, []);
   
-  const reviewList = (review) => (
+  const requestList = (request) => (
     <div className="flex items-center gap-4">
       
       <h2 className="user-name">
-        You have a message from an user Id of {review.reviewerId}
+        You have a job request from an user Id of {request.senderId}
       </h2>
       
-      <Link to={`/detail?id=${review.id}`}>
+      <Link to={`/detail?id=${request.id}`}>
         <button className="button">
-          Request Job
+          View Request Job
         </button>
       </Link>
                 
@@ -64,17 +64,17 @@ const JobRequestPage = () => {
     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
       {/* Contact Info Section */}
       <div style={{ flex: 1, background: '#e1cdca', padding: '20px', borderRadius: '10px' }}>
-        <h1>Hello! You have received {reviews.length } requests so far!</h1>
+        <h1>Hello! You have received {requests.length } requests so far!</h1>
         
         
-        {reviews.length === 0 ? ( /*if the the list of truckers is empty*/
+        {requests.length === 0 ? ( /*if the the list of truckers is empty*/
           <h1>
             You currently have no requests!
           </h1>
         
         ) : (
-              reviews.map((review) => (
-                reviewList(review)
+              requests.map((request) => (
+                requestList(request)
             ))
         )}
         

@@ -50,39 +50,6 @@ router.post('/', authenticate, async (req, res) => {
 });
 
 
-// router.get('/', authenticate, async (req, res) => {
-//     try {
-//       const userId = req.user.id;  // Get the logged-in user's ID from the authenticated request
-  
-//       // Fetch messages where the user is either the sender or the target
-//       const messages = await Message.findAll({
-//         where: {
-//           [Sequelize.Op.or]: [
-//             { senderId: userId },  // Messages sent by the logged-in user
-//             { targetId: userId },  // Messages sent to the logged-in user
-//           ]
-//         },
-//         include: [
-//           {
-//             model: User,   // Include sender details
-//             as: 'sender',
-//             attributes: ['id', 'name', 'username'],
-//           },
-//           {
-//             model: User,   // Include target details
-//             as: 'target',
-//             attributes: ['id', 'name', 'username'],
-//           },
-//         ],
-//         order: [['createdAt', 'DESC']], // Optional: Order by message creation date, most recent first
-//       });
-  
-//       res.json(messages);
-//     } catch (error) {
-//       console.error('Error fetching messages:', error);
-//       res.status(500).json({ error: error.message });
-//     }
-// });
 
 
 
@@ -119,6 +86,49 @@ router.get('/', authenticate, async (req, res) => {
       res.status(500).json({ error: error.message });
     }
 });
+
+
+
+
+
+
+// Get request for a user (public)
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const requests = await Message.findAll({
+      where: { targetId: req.params.userId },
+      
+    });
+    
+    res.json(requests);
+  } catch (error) {
+    console.error('Error fetching requests:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+// Get Review by its unique id after finding which user it belongs to
+router.get('/:id', async (req, res) => {
+  try {
+    const request = await Message.findByPk(req.params.id, {
+      // if you want to select certain attributes  from the review model
+      attributes: ['content', 'rating', 'targetId', 'targetType', 'reviewerId'],
+      
+      
+    });
+    
+    if (!review) {
+      return res.status(404).json({ error: 'Review not found' });
+    }
+    
+    res.json(request);
+  } catch (error) {
+    console.error('Error fetching the request:', error);
+    res.status(500).json({ error: 'Failed to fetch the request' });
+  }
+}
+);
 
 
 
