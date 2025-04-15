@@ -57,21 +57,27 @@ function Header() {
           <li className="nav-item rounded"><Link to="/loadboards">Load Board</Link></li>
           
           {isLoggedIn && (
-            <li className="nav-item rounded logout-btn">
-              <button 
-                onClick={handleLogout}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  color: 'inherit',
-                  font: 'inherit',
-                  cursor: 'pointer',
-                  padding: 0
-                }}
-              >
-                Logout {userName ? `(${userName})` : ''}
-              </button>
-            </li>
+            <>
+              <li className="nav-item rounded">
+                <Link to="/profile">Profile</Link>
+              </li>
+              
+              <li className="nav-item rounded logout-btn">
+                <button 
+                  onClick={handleLogout}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: 'inherit',
+                    font: 'inherit',
+                    cursor: 'pointer',
+                    padding: 0
+                  }}
+                >
+                  Logout {userName ? `(${userName})` : ''}
+                </button>
+              </li>
+            </>
           )}
         </ul>
         <hr></hr>

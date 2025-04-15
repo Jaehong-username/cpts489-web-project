@@ -50,9 +50,6 @@ function TruckerBroker() {
             </Link>
             
             
-            
-            
-            
         </div>
     );
     return(
@@ -80,10 +77,6 @@ function TruckerBroker() {
                             ))
                         )}
                     
-                        
-                        
-                        
-                        
                     </Swiper>
                 </div>
             </div>
