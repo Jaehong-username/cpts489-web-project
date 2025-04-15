@@ -11,6 +11,8 @@ const feedbackRoutes = require('./routes/feedback');
 const messageRoutes = require('./routes/message');
 const userRoutes = require('./routes/users');
 const LoadBoardRoutes = require('./routes/loadBoard')
+const BrokerLoads = require('./routes/brokerLoads')
+const companyPageRoutes = require('./routes/companyPage');
 
 const cors = require('cors');
 
@@ -36,6 +38,8 @@ app.use('/api/feedback', feedbackRoutes);
 app.use('/api/message', messageRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/loads', LoadBoardRoutes)
+app.use('/api/broker/loads', BrokerLoads)
+app.use('/api/company', companyPageRoutes);
 
 // Test route
 //  When a GET request is made to /api/test
