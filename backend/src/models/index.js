@@ -7,6 +7,7 @@ const Review = require('./review');
 const BrokerTrucker = require('./brokerTruckers');
 const Feedback = require('./feedback');
 const Message = require('./Message');
+const Load = require('./loads')(sequelize)
 
 // User associations
 User.hasOne(Trucker, { foreignKey: 'userId', as: 'truckerProfile' });
@@ -36,5 +37,6 @@ module.exports = {
   Review,
   BrokerTrucker,
   Feedback,
-  Message
+  Message,
+  Load
 };
