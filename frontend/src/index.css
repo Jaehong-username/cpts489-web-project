@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,9 +25,13 @@ body {
 
 
 .nav-list{
-  justify-content: space-between; /* Distributes items with equal spacing */
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 20px;
+  margin: 0;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .nav-item {
@@ -39,6 +44,7 @@ body {
   background: #e1cdca;
   color: rgba(0,0,0, .5);
   border-radius: 20px;
+  white-space: nowrap;
 }
 
 .admin-wrapper{
@@ -178,6 +184,12 @@ body {
 .main-content {
   flex: 1;
 }
+
+main.container{
+  flex: 1;
+}
+
+
 
 
 .about-wrapper{

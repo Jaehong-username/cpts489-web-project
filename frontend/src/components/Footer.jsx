@@ -3,7 +3,7 @@ import '../index.css';
 
 function Footer(){
     return(
-        <div class = "bottom-text">
+        <div className = "bottom-text">
             <address>
                 Pullman, WA 99163
             </address>
