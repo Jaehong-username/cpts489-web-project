@@ -7,6 +7,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 import { Link } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
+
 
 function ProfilePage() {
     
@@ -16,13 +18,16 @@ function ProfilePage() {
     useEffect(() => {
         // to get the user information
         const token = localStorage.getItem('token');
-
+        
+        const decoded = jwtDecode(token);
+        const userId = decoded.id
+        
         if (!token) {
             alert("You must be logged in to view your profile!");
             return;
         }
         
-        fetch('http://localhost:3001/api/auth/login', { 
+        fetch(`http://localhost:3000/api/users/${userId}`, {  //make sure to use back tick
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`,

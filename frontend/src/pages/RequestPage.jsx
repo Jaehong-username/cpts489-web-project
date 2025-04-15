@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 
-const ContactPage = () => {
+const JobRequestPage = () => {
+  const { userId } = useParams(); // Get userId from the URL
+  const [reviews, setReviews] = useState([]);
+  
+  
+  
   //setFormData: A function used to update the state (formData).
   const [formData, setFormData] = useState({
     first_name: '',
@@ -157,4 +163,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default JobRequestPage;

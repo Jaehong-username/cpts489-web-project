@@ -12,6 +12,8 @@ import MessagePage from './pages/MessagePage.jsx';
 import AdminDashboardPage from './pages/AdminDashboardPage.jsx';
 import TermsConditionsPage from './pages/TermsConditionsPage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
+import RequestPage from './pages/RequestPage.jsx';
+import RequestDetailPage from './pages/RequestDetailPage.jsx';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
@@ -34,6 +36,8 @@ function App() {
             <Route path="/admin-dashboard" element={<AdminDashboardPage />} />
             <Route path="/terms-conditions" element={<TermsConditionsPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/requests" element={<RequestPage />} />
+            <Route path="/request-detail" element={<RequestDetailPage />} />
           </Routes>
         </main>
         <Footer />
