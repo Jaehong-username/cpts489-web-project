@@ -1,0 +1,200 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "juliedudley",
+      "email": "ataylor@gmail.com",
+      "password": "pFxrSqupQqOn",
+      "role": "trucker",
+      "name": "Julie Dudley",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "username": "johnthomas",
+      "email": "dbryan@yahoo.com",
+      "password": "jCzUxiTh2IPD",
+      "role": "trucker",
+      "name": "John Thomas",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "username": "mollyhart",
+      "email": "yvonne54@gmail.com",
+      "password": "t2cIl2PCP32q",
+      "role": "trucker",
+      "name": "Molly Hart",
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "username": "danielbrown",
+      "email": "rodriguezzachary@gmail.com",
+      "password": "wnKPiSuFLENR",
+      "role": "trucker",
+      "name": "Daniel Brown",
+      "isActive": true
+    },
+    {
+      "id": 5,
+      "username": "margaretgill",
+      "email": "wardhannah@yahoo.com",
+      "password": "ROcjNZRUUMoX",
+      "role": "trucker",
+      "name": "Margaret Gill",
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "username": "michaellloyd",
+      "email": "fphillips@yahoo.com",
+      "password": "bMrD1aMlIZHp",
+      "role": "trucker",
+      "name": "Michael Lloyd",
+      "isActive": true
+    },
+    {
+      "id": 7,
+      "username": "darincook",
+      "email": "kayla08@gmail.com",
+      "password": "d6Is3bRxFxuU",
+      "role": "trucker",
+      "name": "Darin Cook",
+      "isActive": true
+    },
+    {
+      "id": 8,
+      "username": "stevenmcdowell",
+      "email": "jason91@gmail.com",
+      "password": "Wtr5IXYoelm7",
+      "role": "trucker",
+      "name": "Steven Mcdowell",
+      "isActive": true
+    },
+    {
+      "id": 9,
+      "username": "benjaminperry",
+      "email": "martineztina@gmail.com",
+      "password": "TEwonfvIs3rz",
+      "role": "broker",
+      "name": "Benjamin Perry",
+      "isActive": true
+    },
+    {
+      "id": 10,
+      "username": "brittneycross",
+      "email": "joyce72@yahoo.com",
+      "password": "aCQu3CDzZAAq",
+      "role": "broker",
+      "name": "Brittney Cross",
+      "isActive": true
+    },
+    {
+      "id": 11,
+      "username": "misschristineschmidt",
+      "email": "bairddaniel@hotmail.com",
+      "password": "t1xRbOatrKT7",
+      "role": "broker",
+      "name": "Miss Christine Schmidt",
+      "isActive": true
+    },
+    {
+      "id": 12,
+      "username": "markpatel",
+      "email": "buckleyrebecca@yahoo.com",
+      "password": "NgD5Dxk2x25z",
+      "role": "broker",
+      "name": "Mark Patel",
+      "isActive": true
+    }
+  ],
+  "brokers": [
+    {
+      "userId": 9,
+      "company": "Eagle Eye Brokers",
+      "rating": 0
+    },
+    {
+      "userId": 10,
+      "company": "Eagle Eye Brokers",
+      "rating": 0
+    },
+    {
+      "userId": 11,
+      "company": "Eagle Eye Brokers",
+      "rating": 0
+    },
+    {
+      "userId": 12,
+      "company": "Eagle Eye Brokers",
+      "rating": 0
+    }
+  ],
+  "truckers": [
+    {
+      "userId": 1,
+      "capacity": "N/A",
+      "status": "active",
+      "rating": 0,
+      "currentCity": "N/A",
+      "qualifications": "general"
+    },
+    {
+      "userId": 2,
+      "capacity": "N/A",
+      "status": "active",
+      "rating": 0,
+      "currentCity": "N/A",
+      "qualifications": "general"
+    },
+    {
+      "userId": 3,
+      "capacity": "N/A",
+      "status": "active",
+      "rating": 0,
+      "currentCity": "N/A",
+      "qualifications": "general"
+    },
+    {
+      "userId": 4,
+      "capacity": "N/A",
+      "status": "active",
+      "rating": 0,
+      "currentCity": "N/A",
+      "qualifications": "general"
+    },
+    {
+      "userId": 5,
+      "capacity": "N/A",
+      "status": "active",
+      "rating": 0,
+      "currentCity": "N/A",
+      "qualifications": "general"
+    },
+    {
+      "userId": 6,
+      "capacity": "N/A",
+      "status": "active",
+      "rating": 0,
+      "currentCity": "N/A",
+      "qualifications": "general"
+    },
+    {
+      "userId": 7,
+      "capacity": "N/A",
+      "status": "active",
+      "rating": 0,
+      "currentCity": "N/A",
+      "qualifications": "general"
+    },
+    {
+      "userId": 8,
+      "capacity": "N/A",
+      "status": "active",
+      "rating": 0,
+      "currentCity": "N/A",
+      "qualifications": "general"
+    }
+  ]
+}
