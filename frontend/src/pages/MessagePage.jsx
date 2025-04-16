@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-//This is a request!
 const MessagePage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     content: '',
-    senderType: '',
-    senderId: '',
     targetType: '',
     targetId: '',
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Check if user is logged in
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('You must be logged in to send messages');
+      navigate('/login');
+    }
+  }, [navigate]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,34 +30,37 @@ const MessagePage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError(null);
      
-      try {
-        const response = await fetch('http://localhost:3001/api/messages', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch('http://localhost:3001/api/message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}` // Send the authentication token
+        },
+        body: JSON.stringify(formData),
+      });
   
-        const data = await response.json();
-        if (response.ok) {
-          alert('Job Request submitted successfully!');
-          setFormData({
-            content: '',
-            senderType: '',
-            senderId: '',
-            targetType: '',
-            targetId: '',
-          });
-        } else {
-          alert('Error submitting message: ' + data.message);
-        }
-      } catch (error) {
-        console.error('Error submitting message:', error);
-        alert('Something went wrong. Please try again.');
+      const data = await response.json();
+      if (response.ok) {
+        alert('Job Request submitted successfully!');
+        setFormData({
+          content: '',
+          targetType: '',
+          targetId: '',
+        });
+      } else {
+        setError(data.message || 'Error submitting message');
       }
-    
+    } catch (error) {
+      console.error('Error submitting message:', error);
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -62,55 +74,35 @@ const MessagePage = () => {
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
       }}>
         <h2>Send a Job Request</h2>
+        {error && (
+          <div style={{ 
+            padding: '10px', 
+            backgroundColor: '#f8d7da', 
+            color: '#721c24',
+            borderRadius: '5px',
+            marginBottom: '15px'
+          }}>
+            {error}
+          </div>
+        )}
         <form onSubmit={handleSubmit}>
-
           <div style={{ marginBottom: '15px' }}>
-            <label>Please select your occupation</label>
+            <label>Please select the recipient's occupation</label>
             <select
-              type="text"
-              name="senderType"
-              required
-              value={formData.senderType}
-              onChange={handleInputChange}
-              placeholder="e.g. user"
-              style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
-            >
-              <option value = 'trucker'>Trucker</option>
-              <option value = 'broker'>Broker</option>
-            </select>
-          </div>
-
-          <div style={{ marginBottom: '15px' }}>
-            <label>Please type your user ID</label>
-            <input
-              type="text"
-              name="senderId"
-              required
-              value={formData.senderId}
-              onChange={handleInputChange}
-              placeholder="e.g. 101"
-              style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
-            />
-          </div>
-
-          <div style={{ marginBottom: '15px' }}>
-            <label>Plase select the recipient's oocupation</label>
-            <select
-              type="text"
               name="targetType"
               required
               value={formData.targetType}
               onChange={handleInputChange}
-              placeholder="e.g. user"
               style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}
             >
-              <option value = 'trucker'>Trucker</option>
-              <option value = 'broker'>Broker</option>
+              <option value="">-- Select Recipient Type --</option>
+              <option value="trucker">Trucker</option>
+              <option value="broker">Broker</option>
             </select>
           </div>
 
           <div style={{ marginBottom: '15px' }}>
-            <label>Please type the recipient's user id</label>
+            <label>Please enter the recipient's user ID</label>
             <input
               type="text"
               name="targetId"
@@ -136,16 +128,17 @@ const MessagePage = () => {
 
           <button
             type="submit"
+            disabled={isLoading}
             style={{
               padding: '10px 20px',
-              backgroundColor: '#007bff',
+              backgroundColor: isLoading ? '#cccccc' : '#007bff',
               color: 'white',
               border: 'none',
               borderRadius: '5px',
-              cursor: 'pointer'
+              cursor: isLoading ? 'not-allowed' : 'pointer'
             }}
           >
-            Send Job Request
+            {isLoading ? 'Sending...' : 'Send Job Request'}
           </button>
         </form>
       </div>
