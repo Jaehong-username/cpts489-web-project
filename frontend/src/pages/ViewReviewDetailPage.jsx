@@ -42,7 +42,7 @@ const ViewReviewDetailPage = () => {
     <div className="flex items-center gap-4">
         
         <h2 className="user-name">
-              A message from an user Id of {review.reviewId}
+              A Review from an user Id of {review.reviewerId}
         </h2>
         
         <p>Rating: {review.rating}</p>
