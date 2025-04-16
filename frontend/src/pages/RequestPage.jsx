@@ -49,7 +49,7 @@ const JobRequestPage = () => {
         You have a job request from an user Id of {request.senderId}
       </h2>
       
-      <Link to={`/detail?id=${request.id}`}>
+      <Link to={`/request-detail?id=${request.id}`}>
         <button className="button">
           View Request Job
         </button>

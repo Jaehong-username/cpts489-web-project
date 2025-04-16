@@ -45,7 +45,7 @@ const RequestDetailPage = () => {
               A message from an user Id of {request.senderId}
         </h2>
         
-        <p>Rating: {request.content}</p>
+        <p>Request: {request.content}</p>
         
                 
     </div>
