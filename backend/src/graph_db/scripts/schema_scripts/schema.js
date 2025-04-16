@@ -27,7 +27,7 @@ type SocialMediaLink @dgraph(type: "SocialMediaLink") {
 }
 
 type Worker @dgraph(type: "Worker") {
-  id: ID!
+  username: String! @id
   name: String! @search(by: [exact])
   role: String! @search(by: [exact])
   company: Company! @hasInverse(field: workers)
@@ -56,7 +56,7 @@ type Review @dgraph(type: "Review") {
   timestamp: DateTime!
   reviewer: Worker @hasInverse(field: reviewsLeft)
   reviewee: Worker @hasInverse(field: reviews)
-  revieweeCompany: Company
+  revieweeCompany: Company 
 }
 
 type Category @dgraph(type: "Category") {
