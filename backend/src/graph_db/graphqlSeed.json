@@ -1,0 +1,1010 @@
+{
+  "query": "mutation addIndustry($input: [AddIndustryInput!]!) { addIndustry(input: $input) { numUids } }",
+  "variables": {
+    "input": [
+      {
+        "name": "Trucking",
+        "companies": [
+          {
+            "name": "Fast Freight Co.",
+            "address": "101 Logistics Blvd, Reno, NV",
+            "website": "https://fastfreight.example.com",
+            "email": "info@fastfreight.example.com",
+            "phone": "+1-800-FASTFR8",
+            "socialMedia": [
+              {
+                "platform": "LinkedIn",
+                "url": "https://linkedin.com/company/fastfreight"
+              },
+              {
+                "platform": "Twitter",
+                "url": "https://twitter.com/fastfreight"
+              }
+            ],
+            "categories": [
+              {
+                "name": "_:category1"
+              },
+              {
+                "name": "_:category2"
+              }
+            ],
+            "workers": [
+              {
+                "name": "Alice Johnson",
+                "role": "Driver",
+                "status": "Active",
+                "email": "alice.j@fastfreight.example.com",
+                "phone": "+1-800-ALICEJ",
+                "isCustomerFacing": true,
+                "reviews": [
+                  {
+                    "comment": "Could improve response time, but reliable.",
+                    "rating": 4.5,
+                    "timestamp": "2025-04-13T03:44:36.731133Z",
+                    "reviewer": {
+                      "name": "_:worker6"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Handled everything on time.",
+                    "rating": 4.1,
+                    "timestamp": "2025-04-03T03:44:36.731152Z",
+                    "reviewer": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 4.1,
+                    "timestamp": "2025-03-16T03:44:36.731169Z",
+                    "reviewer": {
+                      "name": "_:worker8"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 4.8,
+                    "timestamp": "2025-04-13T03:46:20.406862Z",
+                    "reviewer": {
+                      "name": "_:worker11"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Great coordination on the delivery.",
+                    "rating": 4.2,
+                    "timestamp": "2025-03-02T03:46:20.406900Z",
+                    "reviewer": {
+                      "name": "_:worker4"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 4.9,
+                    "timestamp": "2025-02-20T03:46:20.406975Z",
+                    "reviewer": {
+                      "name": "_:worker2"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  }
+                ],
+                "reviewsLeft": []
+              },
+              {
+                "name": "Bob Martinez",
+                "role": "Dispatcher",
+                "status": "Active",
+                "email": "bob.m@fastfreight.example.com",
+                "phone": "+1-800-BOBMART",
+                "isCustomerFacing": true,
+                "reviews": [
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 3.8,
+                    "timestamp": "2025-04-01T03:44:36.731209Z",
+                    "reviewer": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Handled everything on time.",
+                    "rating": 4.5,
+                    "timestamp": "2025-02-17T03:46:20.406930Z",
+                    "reviewer": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Pleasure to work with.",
+                    "rating": 4.9,
+                    "timestamp": "2025-04-05T03:44:36.731099Z",
+                    "reviewee": {
+                      "name": "_:worker12"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Pleasure to work with.",
+                    "rating": 4.4,
+                    "timestamp": "2025-03-19T03:44:36.731111Z",
+                    "reviewee": {
+                      "name": "_:worker10"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Could improve response time, but reliable.",
+                    "rating": 4.6,
+                    "timestamp": "2025-03-29T03:44:36.731141Z",
+                    "reviewee": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 4.9,
+                    "timestamp": "2025-02-20T03:46:20.406975Z",
+                    "reviewee": {
+                      "name": "_:worker1"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "George Reed",
+                "role": "Long Haul Driver",
+                "status": "Active",
+                "email": "george.r@fastfreight.example.com",
+                "phone": "+1-800-GREED",
+                "isCustomerFacing": true,
+                "reviews": [
+                  {
+                    "comment": "Top-notch execution on this route.",
+                    "rating": 3.8,
+                    "timestamp": "2025-03-24T03:44:36.731179Z",
+                    "reviewer": {
+                      "name": "_:worker10"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 4.8,
+                    "timestamp": "2025-04-07T03:46:20.406908Z",
+                    "reviewer": {
+                      "name": "_:worker11"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Maintains high standards.",
+                    "rating": 4.5,
+                    "timestamp": "2025-02-22T03:46:20.406960Z",
+                    "reviewer": {
+                      "name": "_:worker12"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Very professional and communicative.",
+                    "rating": 4.2,
+                    "timestamp": "2025-04-01T03:44:36.731124Z",
+                    "reviewee": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Could improve response time, but reliable.",
+                    "rating": 4.6,
+                    "timestamp": "2025-04-02T03:44:36.731161Z",
+                    "reviewee": {
+                      "name": "_:worker9"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 4.6,
+                    "timestamp": "2025-03-18T03:44:36.731201Z",
+                    "reviewee": {
+                      "name": "_:worker11"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Top-notch execution on this route.",
+                    "rating": 3.8,
+                    "timestamp": "2025-03-17T03:46:20.406952Z",
+                    "reviewee": {
+                      "name": "_:worker11"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Hannah Lin",
+                "role": "Safety Officer",
+                "status": "Active",
+                "email": "hannah.l@fastfreight.example.com",
+                "phone": "+1-800-HLIN",
+                "isCustomerFacing": false,
+                "reviews": [
+                  {
+                    "comment": "Resolved issues efficiently.",
+                    "rating": 4.7,
+                    "timestamp": "2025-03-03T03:46:20.406819Z",
+                    "reviewer": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Maintains high standards.",
+                    "rating": 4.4,
+                    "timestamp": "2025-03-08T03:46:20.406828Z",
+                    "reviewer": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 4.1,
+                    "timestamp": "2025-03-16T03:44:36.731169Z",
+                    "reviewee": {
+                      "name": "_:worker1"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Great coordination on the delivery.",
+                    "rating": 4.6,
+                    "timestamp": "2025-03-28T03:46:20.406845Z",
+                    "reviewee": {
+                      "name": "_:worker6"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 4.3,
+                    "timestamp": "2025-04-05T03:46:20.406853Z",
+                    "reviewee": {
+                      "name": "_:worker6"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 3.7,
+                    "timestamp": "2025-03-15T03:46:20.406944Z",
+                    "reviewee": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Big Rig Logistics",
+            "address": "500 Diesel Dr, Oklahoma City, OK",
+            "website": "https://bigriglogistics.example.com",
+            "email": "hello@bigriglogistics.example.com",
+            "phone": "+1-833-BIG-RIG",
+            "socialMedia": [
+              {
+                "platform": "Twitter",
+                "url": "https://twitter.com/bigriglogistics"
+              },
+              {
+                "platform": "LinkedIn",
+                "url": "https://linkedin.com/company/bigriglogistics"
+              }
+            ],
+            "categories": [
+              {
+                "name": "_:category4"
+              },
+              {
+                "name": "_:category5"
+              }
+            ],
+            "workers": [
+              {
+                "name": "Eli Turner",
+                "role": "Fleet Supervisor",
+                "status": "Active",
+                "email": "eli.t@bigriglogistics.example.com",
+                "phone": "+1-833-ELITURN",
+                "isCustomerFacing": true,
+                "reviews": [
+                  {
+                    "comment": "Resolved issues efficiently.",
+                    "rating": 4.6,
+                    "timestamp": "2025-04-06T03:44:36.731186Z",
+                    "reviewer": {
+                      "name": "_:worker6"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Resolved issues efficiently.",
+                    "rating": 4.0,
+                    "timestamp": "2025-03-03T03:46:20.406799Z",
+                    "reviewer": {
+                      "name": "_:worker9"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Maintains high standards.",
+                    "rating": 3.9,
+                    "timestamp": "2025-03-24T03:46:20.406836Z",
+                    "reviewer": {
+                      "name": "_:worker11"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Great coordination on the delivery.",
+                    "rating": 4.5,
+                    "timestamp": "2025-04-05T03:46:20.406873Z",
+                    "reviewer": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 3.7,
+                    "timestamp": "2025-03-15T03:46:20.406944Z",
+                    "reviewer": {
+                      "name": "_:worker8"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Pleasure to work with.",
+                    "rating": 4.6,
+                    "timestamp": "2025-03-19T03:44:36.731085Z",
+                    "reviewee": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 4.9,
+                    "timestamp": "2025-04-12T03:44:36.731194Z",
+                    "reviewee": {
+                      "name": "_:worker11"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 3.8,
+                    "timestamp": "2025-04-01T03:44:36.731209Z",
+                    "reviewee": {
+                      "name": "_:worker2"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Maintains high standards.",
+                    "rating": 4.4,
+                    "timestamp": "2025-03-08T03:46:20.406828Z",
+                    "reviewee": {
+                      "name": "_:worker8"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Maintains high standards.",
+                    "rating": 4.1,
+                    "timestamp": "2025-02-21T03:46:20.406882Z",
+                    "reviewee": {
+                      "name": "_:worker9"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 3.7,
+                    "timestamp": "2025-02-27T03:46:20.406892Z",
+                    "reviewee": {
+                      "name": "_:worker6"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Faye Singh",
+                "role": "Mechanic",
+                "status": "Active",
+                "email": "faye.s@bigriglogistics.example.com",
+                "phone": "+1-833-FAYE",
+                "isCustomerFacing": false,
+                "reviews": [
+                  {
+                    "comment": "Great coordination on the delivery.",
+                    "rating": 4.6,
+                    "timestamp": "2025-03-28T03:46:20.406845Z",
+                    "reviewer": {
+                      "name": "_:worker8"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 4.3,
+                    "timestamp": "2025-04-05T03:46:20.406853Z",
+                    "reviewer": {
+                      "name": "_:worker8"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 3.7,
+                    "timestamp": "2025-02-27T03:46:20.406892Z",
+                    "reviewer": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Pleasure to work with.",
+                    "rating": 4.1,
+                    "timestamp": "2025-04-05T03:44:36.731062Z",
+                    "reviewee": {
+                      "name": "_:worker10"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Could improve response time, but reliable.",
+                    "rating": 4.5,
+                    "timestamp": "2025-04-13T03:44:36.731133Z",
+                    "reviewee": {
+                      "name": "_:worker1"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Resolved issues efficiently.",
+                    "rating": 4.6,
+                    "timestamp": "2025-04-06T03:44:36.731186Z",
+                    "reviewee": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Kevin Zhou",
+                "role": "Truck Technician",
+                "status": "Active",
+                "email": "kevin.z@bigriglogistics.example.com",
+                "phone": "+1-833-KZHOU",
+                "isCustomerFacing": false,
+                "reviews": [
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 4.9,
+                    "timestamp": "2025-04-12T03:44:36.731194Z",
+                    "reviewer": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 4.6,
+                    "timestamp": "2025-03-18T03:44:36.731201Z",
+                    "reviewer": {
+                      "name": "_:worker7"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Top-notch execution on this route.",
+                    "rating": 3.8,
+                    "timestamp": "2025-03-17T03:46:20.406952Z",
+                    "reviewer": {
+                      "name": "_:worker7"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Maintains high standards.",
+                    "rating": 3.9,
+                    "timestamp": "2025-03-24T03:46:20.406836Z",
+                    "reviewee": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 4.8,
+                    "timestamp": "2025-04-13T03:46:20.406862Z",
+                    "reviewee": {
+                      "name": "_:worker1"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Highly recommended for future jobs.",
+                    "rating": 4.8,
+                    "timestamp": "2025-04-07T03:46:20.406908Z",
+                    "reviewee": {
+                      "name": "_:worker7"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 3.8,
+                    "timestamp": "2025-04-14T03:46:20.406968Z",
+                    "reviewee": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Could improve response time, but reliable.",
+                    "rating": 4.5,
+                    "timestamp": "2025-03-15T03:46:20.406985Z",
+                    "reviewee": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Linda Yu",
+                "role": "Operations Manager",
+                "status": "Active",
+                "email": "linda.y@bigriglogistics.example.com",
+                "phone": "+1-833-LYOPER",
+                "isCustomerFacing": true,
+                "reviews": [
+                  {
+                    "comment": "Pleasure to work with.",
+                    "rating": 4.9,
+                    "timestamp": "2025-04-05T03:44:36.731099Z",
+                    "reviewer": {
+                      "name": "_:worker2"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Maintains high standards.",
+                    "rating": 4.5,
+                    "timestamp": "2025-02-22T03:46:20.406960Z",
+                    "reviewee": {
+                      "name": "_:worker7"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brokering",
+        "companies": [
+          {
+            "name": "Eagle Eye Brokers",
+            "address": "99 Market Rd, Chicago, IL",
+            "website": "https://eagleeyebrokers.example.com",
+            "email": "contact@eagleeyebrokers.example.com",
+            "phone": "+1-888-EAGLE-99",
+            "socialMedia": [
+              {
+                "platform": "Facebook",
+                "url": "https://facebook.com/eagleeyebrokers"
+              },
+              {
+                "platform": "LinkedIn",
+                "url": "https://linkedin.com/company/eagleeyebrokers"
+              }
+            ],
+            "categories": [
+              {
+                "name": "_:category1"
+              },
+              {
+                "name": "_:category3"
+              }
+            ],
+            "workers": [
+              {
+                "name": "Carlos Vega",
+                "role": "Account Manager",
+                "status": "Active",
+                "email": "carlos.v@eagleeyebrokers.example.com",
+                "phone": "+1-888-CARLOS",
+                "isCustomerFacing": true,
+                "reviews": [
+                  {
+                    "comment": "Pleasure to work with.",
+                    "rating": 4.6,
+                    "timestamp": "2025-03-19T03:44:36.731085Z",
+                    "reviewer": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Very professional and communicative.",
+                    "rating": 4.2,
+                    "timestamp": "2025-04-01T03:44:36.731124Z",
+                    "reviewer": {
+                      "name": "_:worker7"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Could improve response time, but reliable.",
+                    "rating": 4.6,
+                    "timestamp": "2025-03-29T03:44:36.731141Z",
+                    "reviewer": {
+                      "name": "_:worker2"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Top-notch execution on this route.",
+                    "rating": 4.0,
+                    "timestamp": "2025-03-05T03:46:20.406917Z",
+                    "reviewer": {
+                      "name": "_:worker4"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Always responsive and courteous.",
+                    "rating": 3.8,
+                    "timestamp": "2025-04-14T03:46:20.406968Z",
+                    "reviewer": {
+                      "name": "_:worker11"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Could improve response time, but reliable.",
+                    "rating": 4.5,
+                    "timestamp": "2025-03-15T03:46:20.406985Z",
+                    "reviewer": {
+                      "name": "_:worker11"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Handled everything on time.",
+                    "rating": 4.1,
+                    "timestamp": "2025-04-03T03:44:36.731152Z",
+                    "reviewee": {
+                      "name": "_:worker1"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Resolved issues efficiently.",
+                    "rating": 4.7,
+                    "timestamp": "2025-03-03T03:46:20.406819Z",
+                    "reviewee": {
+                      "name": "_:worker8"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Great coordination on the delivery.",
+                    "rating": 4.5,
+                    "timestamp": "2025-04-05T03:46:20.406873Z",
+                    "reviewee": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  },
+                  {
+                    "comment": "Handled everything on time.",
+                    "rating": 4.5,
+                    "timestamp": "2025-02-17T03:46:20.406930Z",
+                    "reviewee": {
+                      "name": "_:worker2"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Diana Kim",
+                "role": "Broker Assistant",
+                "status": "Active",
+                "email": "diana.k@eagleeyebrokers.example.com",
+                "phone": "+1-888-DIANA",
+                "isCustomerFacing": true,
+                "reviews": [],
+                "reviewsLeft": [
+                  {
+                    "comment": "Great coordination on the delivery.",
+                    "rating": 4.2,
+                    "timestamp": "2025-03-02T03:46:20.406900Z",
+                    "reviewee": {
+                      "name": "_:worker1"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  },
+                  {
+                    "comment": "Top-notch execution on this route.",
+                    "rating": 4.0,
+                    "timestamp": "2025-03-05T03:46:20.406917Z",
+                    "reviewee": {
+                      "name": "_:worker3"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Isaac Ford",
+                "role": "Rate Specialist",
+                "status": "Active",
+                "email": "isaac.f@eagleeyebrokers.example.com",
+                "phone": "+1-888-ISAACF",
+                "isCustomerFacing": true,
+                "reviews": [
+                  {
+                    "comment": "Could improve response time, but reliable.",
+                    "rating": 4.6,
+                    "timestamp": "2025-04-02T03:44:36.731161Z",
+                    "reviewer": {
+                      "name": "_:worker7"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Maintains high standards.",
+                    "rating": 4.1,
+                    "timestamp": "2025-02-21T03:46:20.406882Z",
+                    "reviewer": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Resolved issues efficiently.",
+                    "rating": 4.0,
+                    "timestamp": "2025-03-03T03:46:20.406799Z",
+                    "reviewee": {
+                      "name": "_:worker5"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company3"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "Jasmine Patel",
+                "role": "Freight Coordinator",
+                "status": "Active",
+                "email": "jasmine.p@eagleeyebrokers.example.com",
+                "phone": "+1-888-JPATEL",
+                "isCustomerFacing": true,
+                "reviews": [
+                  {
+                    "comment": "Pleasure to work with.",
+                    "rating": 4.1,
+                    "timestamp": "2025-04-05T03:44:36.731062Z",
+                    "reviewer": {
+                      "name": "_:worker6"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  },
+                  {
+                    "comment": "Pleasure to work with.",
+                    "rating": 4.4,
+                    "timestamp": "2025-03-19T03:44:36.731111Z",
+                    "reviewer": {
+                      "name": "_:worker2"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company2"
+                    }
+                  }
+                ],
+                "reviewsLeft": [
+                  {
+                    "comment": "Top-notch execution on this route.",
+                    "rating": 3.8,
+                    "timestamp": "2025-03-24T03:44:36.731179Z",
+                    "reviewee": {
+                      "name": "_:worker7"
+                    },
+                    "revieweeCompany": {
+                      "name": "_:company1"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

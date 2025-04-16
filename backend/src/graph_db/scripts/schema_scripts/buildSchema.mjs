@@ -13,7 +13,7 @@ dotenv.config({ path: path.join(__dirname, '../../../../.env') });
 
 const endpoint = process.env.DGRAPH_ENDPOINT_LINUX;
 if (!endpoint) {
-  console.error('❌ DGRAPH_ENDPOINT_LINUX not defined in .env');
+  console.error('DGRAPH_ENDPOINT_LINUX not defined in .env');
   process.exit(1);
 }
 
@@ -29,14 +29,14 @@ async function updateSchema() {
     const result = await res.text();
 
     if (!res.ok) {
-      console.error(`❌ Failed to update schema: ${res.status}`);
+      console.error(`Failed to update schema: ${res.status}`);
       console.error(result);
     } else {
-      console.log('✅ Schema successfully updated!');
+      console.log('Schema successfully updated!');
       console.log(result);
     }
   } catch (err) {
-    console.error('❌ Error while sending schema:', err.message);
+    console.error('Error while sending schema:', err.message);
   }
 }
 

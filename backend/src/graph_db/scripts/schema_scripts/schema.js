@@ -29,7 +29,7 @@ type SocialMediaLink @dgraph(type: "SocialMediaLink") {
 type Worker @dgraph(type: "Worker") {
   id: ID!
   name: String! @search(by: [exact])
-  role: String!
+  role: String! @search(by: [exact])
   company: Company! @hasInverse(field: workers)
   status: String
   rating: Float
