@@ -46,7 +46,7 @@ const ViewReviewPage = () => {
         <Link to={`/view-reviews-detail?id=${review.id}`}>
               
             <h2 className="user-name">
-                A message from an user Id of {review.reviewerId}
+                A Review from an user Id of {review.reviewerId}
             </h2>
         
         </Link>
